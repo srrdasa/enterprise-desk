@@ -2,8 +2,16 @@
 
 **STATUS: DRAFT — not yet confirmed by the Principal.**
 The assignment engine reads ONLY a CONFIRMED version of this file.
-Reply with row-number corrections only ("3: HOD Graphics · 7: guest,
-skip"); a blank reply confirms every row as printed.
+
+**Editing surface:** the Principal edits this table in Notion —
+https://app.notion.com/p/3ca81bf463b48175b6b9cf9138a06a84 (created 2026-08-28 via
+his Notion connector, NOT the registers integration token, so `scripts/notion.py`
+cannot read it; the desk reads it back through the connector on request). That page
+carries a "✏️ Correction" column which wins over the inferred values. THIS file is
+what the desk actually reads — the desk re-reads the Notion page on the Principal's
+word, applies each correction here, flips this header to CONFIRMED with the date,
+and commits. Corrections may also be given in chat by row number ("3: HOD Graphics
+· 7: guest, skip").
 
 | # | Name | ClickUp ID | Email | Slack ID | Department (inferred) | Role | Confidence | Evidence |
 |---|---|---|---|---|---|---|---|---|

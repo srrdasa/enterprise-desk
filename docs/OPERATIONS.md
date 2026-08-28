@@ -28,6 +28,12 @@
   Required custom fields not yet created on either list — `python3
   scripts/clickup.py missing` prints the exact set (ClickUp UI only; the API
   cannot create fields).
+- Notion (Principal's own workspace, "Mukunda Charana Dasa's Space", reached via his
+  **Notion connector** — a different auth path from the registers integration token):
+  Org Structure editing surface —
+  https://app.notion.com/p/3ca81bf463b48175b6b9cf9138a06a84. The desk reads it back
+  through the connector; `scripts/notion.py` (integration token) CANNOT see it, so no
+  automated leg may depend on it.
 - Notion registers parent ("MKCD Desk Registers"): **PENDING** — env pair not set;
   setup is §0 of docs/NOTION-REGISTERS.md (the Principal's 5 minutes). Record the
   four register page links here the day they exist.
