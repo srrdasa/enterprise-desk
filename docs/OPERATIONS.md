@@ -3,9 +3,11 @@
 ## 1. Identity
 - Principal: **Mukunda Dasa** — runs the **HKGT DMT** (Hare Krishna Golden Temple
   Digital Marketing Team). Slack ID: env `PRINCIPAL_SLACK_ID` — his HUMAN member ID
-  (Slack profile → ⋮ → Copy member ID), NEVER the bot's own ID `[[unverified: value
-  not yet set in env]]`. Mailboxes: `[[unverified: Gmail/Outlook addresses pending
-  from the Principal]]`.
+  (Slack profile → ⋮ → Copy member ID), NEVER the bot's own ID. Verified 2026-08-28
+  via Slack users.info: resolves to "Mukunda Dasa" (human, workspace owner) and
+  differs from the bot's own user ID. ClickUp ID: `100877577` (workspace member
+  fetch 2026-08-28, email match mkcd@hkmhyderabad.org). Mailboxes: `[[unverified:
+  Gmail/Outlook addresses pending from the Principal]]`.
 - **The organisation's name is exactly "HKGT DMT" or the full name above — no other
   abbreviation, ever.** A four-letter form starting with the same letters that names
   a DIFFERENT organisation appeared in an early draft; the contamination grep
@@ -20,13 +22,21 @@
 
 ## 2. Infrastructure map
 - ClickUp: Tasks list `901616685481` · Ideas list `901616685482`
-  (docs/CLICKUP-SCHEMA.md).
+  (docs/CLICKUP-SCHEMA.md). Both live in workspace **"Hare Krishna Movement"**
+  (team `90161377214`) — a second workspace ("Hem Chand Tunga HGT Workspace") is
+  visible to the token but is NOT the desk's; org/task fetches scope to the first.
+  Required custom fields not yet created on either list — `python3
+  scripts/clickup.py missing` prints the exact set (ClickUp UI only; the API
+  cannot create fields).
 - Notion registers parent ("MKCD Desk Registers"): **PENDING** — env pair not set;
   setup is §0 of docs/NOTION-REGISTERS.md (the Principal's 5 minutes). Record the
   four register page links here the day they exist.
-- Slack workspace: hkgtdmt.slack.com · welcome/announcements: #team-announcements
-  `[[unverified: channel ID pending first roster fetch]]` · digest channel + ideas
-  channel: `[[unverified: to be confirmed by the Principal]]`.
+- Slack workspace: hkgtdmt.slack.com · welcome/announcements: **#all-hkgt-dmt**
+  `C0BLXK2R279` (no #team-announcements exists; this is the workspace-wide default
+  channel — proposed 2026-08-28, awaiting the Principal's confirmation; the bot is
+  not yet a member and must join before posting) · digest channel + ideas channel:
+  `[[unverified: to be confirmed by the Principal]]`. Other public channels:
+  #social `C0BM9L2ETS9`, #new-channel `C0BMEU22DKK` (bot is a member of both).
 - Drive filing root / restricted folder: `[[unverified: pending]]`.
 - Otter account: the Principal's (connector-bound, his Claude account).
 - NO Atlassian/Confluence anywhere in this desk — any reference, env var, check or

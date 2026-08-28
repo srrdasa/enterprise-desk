@@ -38,6 +38,10 @@ try:
             try:
                 C.fields(lid)
                 print(f'PASS  ClickUp {name} custom fields readable ({len(C.fields(lid))} fields)')
+                miss = C.missing_fields(name, lid)
+                if miss:
+                    print(f"WARN  ClickUp {name} list missing custom fields (create in ClickUp UI, "
+                          f"docs/CLICKUP-SCHEMA.md): " + ' · '.join(f'{n} ({t})' for n, t in miss))
             except RuntimeError as e:
                 print('FAIL ', e)
     import ideas, tracker_audit, pending, slack, edit_log, wa_parse, notion

@@ -263,6 +263,23 @@ def members(list_id=None):
                         'email': u.get('email'), 'role': u.get('role')})
     return out
 
+# Custom fields each list must carry (docs/CLICKUP-SCHEMA.md §2–3). The public
+# API cannot create custom fields — a missing one is created by hand in ClickUp.
+REQUIRED_FIELDS = {
+    'Tasks': [('Due moves', 'number'), ('Waiting on', 'short text'),
+              ('Source', 'short text')],
+    'Ideas': [('State', 'dropdown: Open · Promoted · Merged · Killed'),
+              ('ICE', 'number'), ('RICE', 'number'), ('Mentions', 'number'),
+              ('Skips', 'number'),
+              ('Disposition', 'dropdown: IMMEDIATE · FUTURE · ALREADY-COVERED'),
+              ('Reviewed', 'date'), ('Promoted to', 'short text'),
+              ('Source', 'short text')],
+}
+
+def missing_fields(label, list_id):
+    have = fields(list_id)
+    return [(n, t) for n, t in REQUIRED_FIELDS[label] if n not in have]
+
 # ---------------------------------------------------------------- CLI
 def _smoke():
     for label, lid in (('Tasks', TASKS()), ('Ideas', IDEAS())):
@@ -283,5 +300,17 @@ if __name__ == '__main__':
             print(f'{label} {lid}:')
             for name, f in sorted(fields(lid).items()):
                 print(f"  {f['type']:<12} {name}  ({f['id']})")
+    elif cmd == 'missing':
+        any_missing = False
+        for label, lid in (('Tasks', TASKS()), ('Ideas', IDEAS())):
+            miss = missing_fields(label, lid)
+            if miss:
+                any_missing = True
+                print(f'{label} list {lid} — create these custom fields in ClickUp '
+                      f'(UI only; the API cannot):')
+                for n, t in miss:
+                    print(f'  {n}  ({t})')
+        if not any_missing:
+            print('All required custom fields present on both lists.')
     else:
         _smoke()
