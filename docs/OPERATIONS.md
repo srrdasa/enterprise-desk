@@ -42,6 +42,11 @@
   surface until 2026-08-28; the Whimsical board replaced it). Regenerated from the
   board; edits made on the page are overwritten. `scripts/notion.py` (integration
   token) CANNOT see it, so no automated leg may depend on it.
+- Organisational knowledge base: docs/ORG-KNOWLEDGE.md — what the org does, its
+  verticals, digital estate, tooling, doctrine and stated constraints, extracted from
+  the 2026-08-27 "Departmental Structure Overview" Otter transcript. Reference only,
+  never live state. Derived objectives (DRAFT, unactioned) —
+  https://app.notion.com/p/3ca81bf463b481d1a4e8f6a7c4eb6d87
 - Notion registers parent ("MKCD Desk Registers"): **PENDING** — env pair not set;
   setup is §0 of docs/NOTION-REGISTERS.md (the Principal's 5 minutes). Record the
   four register page links here the day they exist.
