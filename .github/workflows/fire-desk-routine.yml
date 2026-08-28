@@ -1,0 +1,27 @@
+# OPTIONAL alternate trigger: fires the desk Routine via its API trigger, passing
+# secrets at runtime. Only needed if you prefer GitHub cron over Claude's scheduler.
+# SETUP: create the Routine with an API trigger, then add Actions secrets:
+#   ROUTINE_FIRE_URL, ROUTINE_API_TOKEN, NOTION_API_KEY, NOTION_TASKS_DB,
+#   NOTION_IDEAS_DB, SLACK_BOT_TOKEN. Tokens live ONLY in Actions secrets.
+name: fire-desk-routine
+on:
+  workflow_dispatch: {}
+  # schedule:
+  #   - cron: '30 3 * * *'   # set your time (UTC)
+jobs:
+  fire:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fire routine with runtime credentials
+        run: |
+          curl -sS -X POST "$ROUTINE_FIRE_URL" \
+            -H "Authorization: Bearer $ROUTINE_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": \"Credentials for this run — export before any desk action: NOTION_API_KEY=$NOTION_API_KEY NOTION_TASKS_DB=$NOTION_TASKS_DB NOTION_IDEAS_DB=$NOTION_IDEAS_DB SLACK_BOT_TOKEN=$SLACK_BOT_TOKEN\"}"
+        env:
+          ROUTINE_FIRE_URL: ${{ secrets.ROUTINE_FIRE_URL }}
+          ROUTINE_API_TOKEN: ${{ secrets.ROUTINE_API_TOKEN }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_TASKS_DB: ${{ secrets.NOTION_TASKS_DB }}
+          NOTION_IDEAS_DB: ${{ secrets.NOTION_IDEAS_DB }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
