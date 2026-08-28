@@ -1,90 +1,162 @@
 # ORG STRUCTURE — HKGT DMT
 
-**STATUS: CONFIRMED — 2026-08-28.**
-Applied from the Principal's Notion editing surface
-(https://app.notion.com/p/3ca81bf463b48175b6b9cf9138a06a84, read back 2026-08-28) —
-his **✏️ Department** and **✏️ Designation** values are written into the Department
-and Designation columns below and override every inferred value. The assignment
-engine reads this file.
+**STATUS: CONFIRMED — 2026-08-28.** Source of truth for departments, designations and
+reporting lines is the Principal's Whimsical org chart,
+https://whimsical.com/7M4QFiT2MCLRaZG8HT6eBC, read back on 2026-08-28. This file is
+what the desk reads; the board is where the Principal edits.
 
-**HOD resolution (set by the Principal, 2026-08-28): one HOD for all departments.**
-Row 10, Mukunda Dasa, is `All Depts` / `HOD`. `All Depts` is a WILDCARD — it matches
-every department name in this table. So department-of-topic inference
-(`.claude/commands/meeting.md` ASSIGNMENT STEP 2) resolves to row 10 for Graphics,
-Digital Marketing, Fund Raising, Yatra, HR, Culture Connect and Online
-Communications alike. No department has its own head; that is deliberate, not a gap.
-Do not read a department-level "Manager" or "Senior Manager" designation as an HOD —
-`HOD` is the only token the engine matches.
+**HOD resolution (unchanged): one HOD for all departments.** Mukunda Dasa is
+`All Depts` / `HOD`, and `All Depts` is a WILDCARD matching every department name, so
+department-of-topic inference resolves to him. A `Manager`, `Senior Manager` or
+`Incharge` designation is NOT an HOD — `HOD` is the only token the engine matches
+(case-insensitively).
 
-**Editing surface stays Notion:** the Principal edits the page above; the desk reads
-it back on his word, re-applies both ✏️ columns here, re-dates this header, and
-commits. Corrections may also be given in chat by row number ("3: Graphics, HOD ·
-7: skip"). `skip` in Department excludes a person from the desk entirely.
+**Reports to** is now carried per person, straight from the board's nesting. Use it for
+escalation and for chasing through a line manager; it does NOT override HOD routing.
 
-NOTE on the two evidence columns, which describe the ORIGINAL automated fetch and are
-NOT a judgement on the confirmed values: **Role** is the ClickUp PERMISSION level
-(owner/admin/member/guest) — never a job title, and never overwritten by Designation.
-**ID match** is how confidently the person was matched to a Slack account by email —
-`high` means a Slack ID was found, `low` means none was. A `low` row's Department and
-Designation are still Principal-confirmed fact.
+## Roster
 
-| # | Name | ClickUp ID | Email | Slack ID | Department | Designation | Role | ID match | Evidence (fetch 2026-08-28) |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | Akhil | 101043740 | sme@hkmhyderabad.org | — | Online Communications | Social Media Executive | member | low | 4 recent tasks in "MOM Tasks by MKCD / May"; no Slack match found |
-| 2 | Arjunabandhudas | 100909875 | arbd@hkmhyderabad.org | — | Yatra | Yatra Guide | member | low | 124 recent tasks in "Yatra / office works"; no Slack match found |
-| 3 | Bharath Vamshi | 95095479 | asb.vamshi@hkmhyderabad.org | U0BTFS3PP4J | Graphics | Video Editor | member | high | 169 recent tasks in "Graphics Team / Bharth Tasks List"; email match |
-| 4 | CHARAN NELLURU | 101083310 | preach-asst@hkmhyderabad.org | — | Fund Raising | FR Assistant | member | low | 11 recent tasks in "Charan Tasks / daily task"; no Slack match found |
-| 5 | Deepak kumar | 100908342 | deepak.v@hkmhyderabad.org | U0BTHE6D1RP | Yatra | Admin | member | high | 99 recent tasks in "Deepak Tasks / List"; email match |
-| 6 | Gnaneshwar Parishetty | 100909505 | hrexec-dmt@hkmhyderabad.org | — | HR | HR Executive | member | low | 13 recent tasks in "Gnaneshwar Tasks / Daily Tasks"; no Slack match found |
-| 7 | Hem Chand Tunga | 100828205 | manager@hkmhyderabad.org | — | Digital Marketing | Marketing Manager | owner | low | 190 recent tasks in "Daily Tasks / Grenaral Tasks"; no Slack match found |
-| 8 | Himanshu Bisoyi | 100908348 | webdeveloper@hkmhyderabad.org | U0BSXM1A1L7 | Digital Marketing | Web Developer | admin | high | 5 recent tasks in "14.05.2026 MOM TASKS / List"; email match |
-| 9 | MAHA BHUJA DASA | 260630579 | mhbd@hkmhyderabad.org | U0BTGRHEYEQ | Digital Marketing | Senior Manager | admin | high | 72 recent tasks in "MHBD Prabhu Tasks / MHBP Tasks"; email match |
-| 10 | Mukunda Dasa (the Principal) | 100877577 | mkcd@hkmhyderabad.org | U0BN7BW55C0 | All Depts | HOD | admin | high | 72 recent tasks in "24.06.2026 MOM TASKS / List"; email match |
-| 11 | Mukunda Prabhu Exe Asst | 100910556 | dmt@hkmhyderabad.org | — | All Depts | Executive Assistant | admin | low | shared account; 72 recent tasks in "24.06.2026 MOM TASKS / List"; no Slack match found |
-| 12 | Nama Prabhu | 100909874 | namaprabhu@hkmhyderabad.org | — | Fund Raising | FR Preacher | member | low | 34 recent tasks in "24.06.2026 MOM TASKS / List"; no Slack match found |
-| 13 | Naveen R | 106800112 | dmt-accounts@hkmhyderabad.org | — | Fund Raising | DCC Coordinator | member | low | 1 recent task in "Sharavan tasks / List"; no Slack match found |
-| 14 | Praveen | 95095480 | praveen.v@hkmhyderabad.org | U0BU7CS2JN4 | Graphics | Senior Designer | member | high | 129 recent tasks in "Graphics Team / Praveen Tasks List"; email match |
-| 15 | Prema Rupa dasa | 100908346 | yatra1@hkmhyderabad.org | — | Fund Raising | FR Preacher | member | low | 62 recent tasks in "Prabhus Tasks / Prema Rupa Prabhu"; no Slack match found |
-| 16 | Ravi Pusthela | 101084085 | ravi.pusthela@hkmhyderabad.org | U0BTH59V9M2 | Graphics | Designer | member | high | 92 recent tasks in "Designer Task Assignment Sheet / Ravi"; email match |
-| 17 | Saci Ku Gauranga Dasa | 100908340 | skgd@hkmhyderabad.org | — | Digital Marketing | CRM Executive | member | low | 28 recent tasks in "Prabhus Tasks / Saci Kumar Gauranga Prabhu"; no Slack match found |
-| 18 | Sashikanta | 100918048 | preacher1@hkmhyderabad.org | — | Culture Connect | Lead Coordinator | member | low | 56 recent tasks in "24.06.2026 MOM TASKS / List"; no Slack match found |
-| 19 | Satish Maddela | 101054675 | satish.maddela@hkmhyderabad.org | — | Online Communications | Manager | member | low | 40 recent tasks in "HKGT Temple Works / Temple Works"; no Slack match found |
-| 20 | SHARAVAN KUMAR B | 100908345 | sharavan.b@hkmhyderabad.org | — | Fund Raising | FR Preacher | member | low | 93 recent tasks in "Sharavan tasks / List"; no Slack match found |
-| 21 | Shree Lakshmi | 266585199 | sugunaradhadevidasi@gmail.com | — | Culture Connect | Manager | member | low | external gmail address; 15 recent tasks in "Prabhus Tasks / Sashikanta Sahoo"; no Slack match found |
-| 22 | Sumanth | 100908337 | seo@hkmhyderabad.org | — | Digital Marketing | SEO | member | low | 38 recent tasks in "HKM SEO / List"; no Slack match found |
-| 23 | V NAVEEN KUMAR | 100908344 | accounts.tridas@hkmhyderabad.org | — | Yatra | Accounts Executive | member | low | 1 recent task in "Prabhus Tasks / Sharavan Prabhu Tasks"; no Slack match found |
-| 24 | Venkatesh (PPC) | 218543610 | dme1@hkmhyderabad.org | — | Digital Marketing | PPC | member | low | 195 recent tasks in "HKGT Performance Marketing / HKGT Daily Tasks"; no Slack match found |
-| 25 | venugopal | 100937968 | conwri@hkmhyderabad.org | — | Online Communications | Content Writer | member | low | 2 recent tasks in "09.04.2026 MOM TASKS / List"; no Slack match found |
-| 26 | Vishnu | 101043738 | editor1@hkmhyderabad.org | — | Online Communications | Video Editor | member | low | 37 recent tasks in "Designer Task Assignment Sheet / vishnu"; no Slack match found |
+| # | Name | Department | Designation | Reports to | ClickUp ID | Email | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 1 | Mukunda Dasa | All Depts | HOD | — (HOD) | 100877577 | mkcd@hkmhyderabad.org | U0BN7BW55C0 |
+| 2 | Mukunda Prabhu Exe Asst | All Depts | Executive Assistant | Mukunda Dasa | 100910556 | dmt@hkmhyderabad.org | — |
+| 3 | Shruthadeva Dasa | Digital Marketing | Digital Marketing Incharge | Mukunda Dasa | — | — | — |
+| 4 | Hem Chand Tunga | Digital Marketing | Marketing Manager | Shruthadeva Dasa | 100828205 | manager@hkmhyderabad.org | — |
+| 5 | G Sai Kiran | Digital Marketing | Tele Caller for Failed Transactions | Hem Chand Tunga | — | — | — |
+| 6 | Himanshu Bisoyi | Digital Marketing | Web Developer | Hem Chand Tunga | 100908348 | webdeveloper@hkmhyderabad.org | U0BSXM1A1L7 |
+| 7 | Venkatesh | Digital Marketing | PPC | Hem Chand Tunga | 218543610 | dme1@hkmhyderabad.org | — |
+| 8 | Sumanth | Digital Marketing | SEO | Hem Chand Tunga | 100908337 | seo@hkmhyderabad.org | — |
+| 9 | MAHA BHUJA DASA | Digital Marketing | Senior Manager | Shruthadeva Dasa | 260630579 | mhbd@hkmhyderabad.org | U0BTGRHEYEQ |
+| 10 | Saci Ku Gauranga Dasa | Digital Marketing | CRM Executive | MAHA BHUJA DASA | 100908340 | skgd@hkmhyderabad.org | — |
+| 11 | Satish Maddela | Online Communications & Graphics | Manager | Mukunda Dasa | 101054675 | satish.maddela@hkmhyderabad.org | — |
+| 12 | Shashank | Online Communications & Graphics | Video Editor | Satish Maddela | — | — | — |
+| 13 | Chenna Reddy | Online Communications & Graphics | Photographer & Videographer | Satish Maddela | — | — | — |
+| 14 | venugopal | Online Communications & Graphics | Content Writer | Satish Maddela | 100937968 | conwri@hkmhyderabad.org | — |
+| 15 | Vishnu | Online Communications & Graphics | Video Editor | Satish Maddela | 101043738 | editor1@hkmhyderabad.org | — |
+| 16 | Akhil | Online Communications & Graphics | Social Media Executive | Satish Maddela | 101043740 | sme@hkmhyderabad.org | — |
+| 17 | Bharath Vamshi | Online Communications & Graphics | Video Editor | Satish Maddela | 95095479 | asb.vamshi@hkmhyderabad.org | U0BTFS3PP4J |
+| 18 | Praveen | Online Communications & Graphics | Senior Designer | Satish Maddela | 95095480 | praveen.v@hkmhyderabad.org | U0BU7CS2JN4 |
+| 19 | Sai Vardhan | Tele Sales | Tele Sales Manager | Mukunda Dasa | — | — | — |
+| 20 | Vikash Kumar | Tele Sales | Senior Tele Sales Executive | Sai Vardhan | — | — | — |
+| 21 | Sri Lakshmi | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
+| 22 | Sai Kumar | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
+| 23 | Narsing Rao | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
+| 24 | Sai Kiran | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
+| 25 | Raja Shekhar | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
+| 26 | Sharath | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
+| 27 | Sudhir | Fund Raising | FR Preacher | Mukunda Dasa | — | — | — |
+| 28 | Nama Prabhu | Fund Raising | FR Preacher | Mukunda Dasa | 100909874 | namaprabhu@hkmhyderabad.org | — |
+| 29 | Venkatesh (Auto Driver) | Fund Raising | Auto Driver | Nama Prabhu | — | — | — |
+| 30 | Shiva Vara Prasad | Fund Raising | FR Assistant | Nama Prabhu | — | — | — |
+| 31 | SHARAVAN KUMAR B | Fund Raising | FR Preacher | Mukunda Dasa | 100908345 | sharavan.b@hkmhyderabad.org | — |
+| 32 | Anji | Fund Raising | Auto Driver | SHARAVAN KUMAR B | — | — | — |
+| 33 | CHARAN NELLURU | Fund Raising | FR Assistant | SHARAVAN KUMAR B | 101083310 | preach-asst@hkmhyderabad.org | — |
+| 34 | Naveen R | Fund Raising | DCC Coordinator | Mukunda Dasa | 106800112 | dmt-accounts@hkmhyderabad.org | — |
+| 35 | Suguna Radha Devi Dasii <br><sub>ClickUp: Shree Lakshmi</sub> | Culture Connect | Manager | Mukunda Dasa | 266585199 | sugunaradhadevidasi@gmail.com | — |
+| 36 | Prema Rupa Dasa <br><sub>ClickUp: Prema Rupa dasa</sub> | Culture Connect | Lead Coordinator | Suguna Radha Devi Dasii | 100908346 | yatra1@hkmhyderabad.org | — |
+| 37 | Purushotham | Culture Connect | Office Assistant | Suguna Radha Devi Dasii | — | — | — |
+| 38 | Shivaraj | Culture Connect | Driver | Suguna Radha Devi Dasii | — | — | — |
+| 39 | Amrita Nimai Dasa | Culture Connect | Kirtaniya | Suguna Radha Devi Dasii | — | — | — |
+| 40 | Sudhakar | Culture Connect | Coordinator | Suguna Radha Devi Dasii | — | — | — |
+| 41 | Radha Giridhari Dasa | Culture Connect | Coordinator | Suguna Radha Devi Dasii | — | — | — |
+| 42 | Sashikanta | Culture Connect | Lead Coordinator | Mukunda Dasa | 100918048 | preacher1@hkmhyderabad.org | — |
+| 43 | Sai Vardhan (Yatra) | Yatra | Yatra Manager | Mukunda Dasa | — | — | — |
+| 44 | Hanuma | Yatra | Accounts Executive | Sai Vardhan (Yatra) | — | — | — |
+| 45 | V Naveen Kumar <br><sub>ClickUp: V NAVEEN KUMAR</sub> | Yatra | Accounts Executive | Sai Vardhan (Yatra) | 100908344 | accounts.tridas@hkmhyderabad.org | — |
+| 46 | Deepak kumar | Yatra | Admin | Sai Vardhan (Yatra) | 100908342 | deepak.v@hkmhyderabad.org | U0BTHE6D1RP |
+| 47 | Arjuna Bandhu Dasa <br><sub>ClickUp: Arjunabandhudas</sub> | Yatra | Yatra Guide | Sai Vardhan (Yatra) | 100909875 | arbd@hkmhyderabad.org | — |
+| 48 | Rajendra Prasad | HR | HR Manager | Mukunda Dasa | — | — | — |
+| 49 | Gnaneshwar Parishetty | HR | HR Executive | Rajendra Prasad | 100909505 | hrexec-dmt@hkmhyderabad.org | — |
+| 50 | Bala Mukunda Dasa | AI | AI Implementation Manager | Mukunda Dasa | — | — | — |
+| 51 | Sai | ERP | ERP Developer | Mukunda Dasa | — | — | — |
 
-## UNPLACED (no department signal — stays unplaced until the Principal places them)
+## Carried, pending the Principal's word — NOT on the current board
 
-- 27. (no name) (ClickUp 106864846, Slack —, admin) — no recent task assignments; no
-  Slack match found. Left blank by the Principal on the Notion page, so the fetch
-  result stands: UNPLACED. Never a routing target.
+| Name | Department (last confirmed) | Designation | ClickUp ID | Email | Slack ID |
+|---|---|---|---|---|---|
+| Ravi Pusthela | Graphics (merged into Online Communications & Graphics) | Designer | 101084085 | ravi.pusthela@hkmhyderabad.org | U0BTH59V9M2 |
 
-## Department roll-up (derived from the table above — 26 placed, 1 unplaced)
+He was confirmed on 2026-08-28 and is absent from the board revision of the same day.
+He is an ACTIVE account — a Slack ID and 92 recent ClickUp task assignments — and the
+other two Graphics people (Praveen, Bharath Vamshi) were carried across into
+`Online Communications & Graphics`, so this reads as an omission during the merge
+rather than a departure. He is retained here, excluded from headcounts, and NOT
+routed to, until the Principal says `Ravi: <department>` or `Ravi: remove`. Deleting a
+live person's record on an ambiguous signal is not reversible from the desk's side.
 
-| Department | Count | Rows |
+## Reporting lines
+
+- **Mukunda Dasa** · HOD · _All Depts_
+  - **Mukunda Prabhu Exe Asst** · Executive Assistant · _All Depts_
+  - **Bala Mukunda Dasa** · AI Implementation Manager · _AI_
+  - **Sai** · ERP Developer · _ERP_
+  - **Sai Vardhan** · Tele Sales Manager · _Tele Sales_
+    - **Vikash Kumar** · Senior Tele Sales Executive
+    - **Sri Lakshmi** · Tele Sales Executive
+    - **Sai Kumar** · Tele Sales Executive
+    - **Narsing Rao** · Tele Sales Executive
+    - **Sai Kiran** · Tele Sales Executive
+    - **Raja Shekhar** · Tele Sales Executive
+    - **Sharath** · Tele Sales Executive
+  - **Shruthadeva Dasa** · Digital Marketing Incharge · _Digital Marketing_
+    - **Hem Chand Tunga** · Marketing Manager
+      - **G Sai Kiran** · Tele Caller for Failed Transactions
+      - **Himanshu Bisoyi** · Web Developer
+      - **Venkatesh** · PPC
+      - **Sumanth** · SEO
+    - **MAHA BHUJA DASA** · Senior Manager
+      - **Saci Ku Gauranga Dasa** · CRM Executive
+  - **Satish Maddela** · Manager · _Online Communications & Graphics_
+    - **Shashank** · Video Editor
+    - **Chenna Reddy** · Photographer & Videographer
+    - **venugopal** · Content Writer
+    - **Vishnu** · Video Editor
+    - **Akhil** · Social Media Executive
+    - **Bharath Vamshi** · Video Editor
+    - **Praveen** · Senior Designer
+  - **Sudhir** · FR Preacher · _Fund Raising_
+  - **Nama Prabhu** · FR Preacher · _Fund Raising_
+    - **Venkatesh (Auto Driver)** · Auto Driver
+    - **Shiva Vara Prasad** · FR Assistant
+  - **SHARAVAN KUMAR B** · FR Preacher · _Fund Raising_
+    - **Anji** · Auto Driver
+    - **CHARAN NELLURU** · FR Assistant
+  - **Naveen R** · DCC Coordinator · _Fund Raising_
+  - **Sai Vardhan (Yatra)** · Yatra Manager · _Yatra_
+    - **Hanuma** · Accounts Executive
+    - **V Naveen Kumar** · Accounts Executive
+    - **Deepak kumar** · Admin
+    - **Arjuna Bandhu Dasa** · Yatra Guide
+  - **Suguna Radha Devi Dasii** · Manager · _Culture Connect_
+    - **Prema Rupa Dasa** · Lead Coordinator
+    - **Purushotham** · Office Assistant
+    - **Shivaraj** · Driver
+    - **Amrita Nimai Dasa** · Kirtaniya
+    - **Sudhakar** · Coordinator
+    - **Radha Giridhari Dasa** · Coordinator
+  - **Sashikanta** · Lead Coordinator · _Culture Connect_
+  - **Rajendra Prasad** · HR Manager · _HR_
+    - **Gnaneshwar Parishetty** · HR Executive
+
+## Department roll-up
+
+| Department | People | Reports DIRECTLY to the HOD (not necessarily a head) |
 |---|---|---|
-| Digital Marketing | 6 | 7, 8, 9, 17, 22, 24 |
-| Fund Raising | 5 | 4, 12, 13, 15, 20 |
-| Online Communications | 4 | 1, 19, 25, 26 |
-| Graphics | 3 | 3, 14, 16 |
-| Yatra | 3 | 2, 5, 23 |
-| Culture Connect | 2 | 18, 21 |
-| All Depts | 2 | 10, 11 |
-| HR | 1 | 6 |
+| All Depts | 2 | Mukunda Prabhu Exe Asst |
+| Digital Marketing | 8 | Shruthadeva Dasa |
+| Online Communications & Graphics | 8 | Satish Maddela |
+| Tele Sales | 8 | Sai Vardhan |
+| Fund Raising | 8 | Sudhir, Nama Prabhu, SHARAVAN KUMAR B, Naveen R |
+| Culture Connect | 8 | Suguna Radha Devi Dasii, Sashikanta |
+| Yatra | 5 | Sai Vardhan (Yatra) |
+| HR | 2 | Rajendra Prasad |
+| AI | 1 | Bala Mukunda Dasa |
+| ERP | 1 | Sai |
 
-## Slack tagging coverage — 7 of 27
+**51 people across 10 departments** (+1 carried: Ravi Pusthela).
+Slack-taggable: 6 of 51 — the desk tags by Slack user ID (rule 12), so everyone else CANNOT be @-mentioned.
+26 people on the board have no ClickUp account on record, so they cannot be assigned a ClickUp task until they are invited to the
+workspace and `python3 scripts/org_fetch.py` is re-run.
 
-Only rows 3, 5, 8, 9, 10, 14, 16 carry a Slack ID. The desk tags by Slack user ID
-(rule 12 — a short name does not resolve), so **the other 20 cannot be @-mentioned in
-any outbound draft.** Name them in plain text and say the tag is unavailable; never
-invent a handle. This clears itself when they join Slack under their
-`@hkmhyderabad.org` address and `scripts/org_fetch.py` runs again.
-
-_Sources: ClickUp workspace "Hare Krishna Movement" (members, groups, 90 lists, task
-sample) + Slack roster (emails), fetched 2026-08-28 by `scripts/org_fetch.py` — WARN
-at fetch time: 2 ClickUp workspaces visible, used "Hare Krishna Movement". Department
-and Designation: OPERATOR (the Principal, via the Notion page, read back 2026-08-28)._
+_Read back from the Whimsical board on 2026-08-28. Regenerate the mind map with
+`/mindmap org-structure`._

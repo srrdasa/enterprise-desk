@@ -28,17 +28,20 @@
   Required custom fields not yet created on either list — `python3
   scripts/clickup.py missing` prints the exact set (ClickUp UI only; the API
   cannot create fields).
-- Whimsical workspace "DMT" (connector, enabled in chat 2026-08-28): org chart —
-  https://whimsical.com/7M4QFiT2MCLRaZG8HT6eBC. A MIRROR of
-  boards/mindmaps/org-structure-2026-08-28.md, which is itself generated from
-  docs/ORG-STRUCTURE.md. Never hand-edit the board: /mindmap regenerates it and
-  the edit is lost. Fix the org file, re-run /mindmap.
+- Whimsical workspace "DMT" (connector): org chart —
+  https://whimsical.com/7M4QFiT2MCLRaZG8HT6eBC. **This board is the SOURCE OF TRUTH
+  for org structure** as of 2026-08-28 — the Principal edits it directly, and it is
+  the only surface that carries reporting lines. docs/ORG-STRUCTURE.md, the Notion
+  page and boards/mindmaps/*.md are all generated FROM it on his word. Do NOT
+  regenerate the board from the repo (that direction was reversed on 2026-08-28) —
+  read it back with the Whimsical connector instead.
 - Notion (Principal's own workspace, "Mukunda Charana Dasa's Space", reached via his
   **Notion connector** — a different auth path from the registers integration token):
-  Org Structure editing surface —
-  https://app.notion.com/p/3ca81bf463b48175b6b9cf9138a06a84. The desk reads it back
-  through the connector; `scripts/notion.py` (integration token) CANNOT see it, so no
-  automated leg may depend on it.
+  Org Structure READ-ONLY mirror —
+  https://app.notion.com/p/3ca81bf463b48175b6b9cf9138a06a84 (it was the editing
+  surface until 2026-08-28; the Whimsical board replaced it). Regenerated from the
+  board; edits made on the page are overwritten. `scripts/notion.py` (integration
+  token) CANNOT see it, so no automated leg may depend on it.
 - Notion registers parent ("MKCD Desk Registers"): **PENDING** — env pair not set;
   setup is §0 of docs/NOTION-REGISTERS.md (the Principal's 5 minutes). Record the
   four register page links here the day they exist.

@@ -5,8 +5,11 @@ Examples: `/mindmap org-structure` · `/mindmap project HKGT-Janmashtami` ·
 `/mindmap idea-dependencies --whimsical`
 
 ## 1. GATHER — pull the real data, never invent structure
-- `org-structure` → read docs/ORG-STRUCTURE.md: departments → HODs → managers →
-  employees. **CONFIRMED rows only.** If the file header does not say CONFIRMED,
+- `org-structure` → read docs/ORG-STRUCTURE.md: departments → reporting lines →
+  people. **CONFIRMED rows only.** Since 2026-08-28 the Whimsical board is the SOURCE
+  for org structure and the repo file is generated from it (OPERATIONS §2) — so
+  `--whimsical` here must NOT overwrite that board; mirror to a NEW board, or re-read
+  the existing one first and reconcile. If the file header does not say CONFIRMED,
   print `org file is DRAFT — confirm it first (see docs/ORG-STRUCTURE.md)` and STOP;
   a drafted hierarchy rendered as a diagram reads as settled fact (same gate as
   /meeting).
