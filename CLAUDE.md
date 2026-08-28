@@ -117,7 +117,9 @@ Runs the Principal's enterprise operations:
 14. **Repo SOP.** Any change to this repo (rules, commands, scripts, docs) is
    committed AND pushed to `main` immediately as part of the same piece of work. The
    routine runner re-reads this repo every fire, so `main` is what is actually live —
-   a rule sitting on an unmerged branch is a silent failure mode.
+   a rule sitting on an unmerged branch is a silent failure mode. In web sessions this
+   is satisfied by scripts/sync_main.sh — a session branch left unmerged is a rule-14
+   violation.
 
 ## Credentials (NEVER commit)
 Required environment variables (cloud environment settings, GitHub Actions secrets,
