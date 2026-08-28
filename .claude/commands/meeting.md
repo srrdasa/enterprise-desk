@@ -29,6 +29,12 @@ Owner resolution, in strict order:
    `by department inference` on the proposed row. Departments and HODs come ONLY
    from a docs/ORG-STRUCTURE.md whose header says **CONFIRMED** — a DRAFT org file
    means no inference: the row goes out owner-blank for the Principal to fill.
+   An HOD is a row whose Designation matches `HOD` **case-insensitively**. A row whose
+   Department is **`All Depts` is a WILDCARD HOD** — it heads every department (as of
+   2026-08-28 that is row 10, the Principal, and it is the ONLY HOD, by his decision).
+   Never promote a senior-sounding title: `Manager` and `Senior Manager` are
+   designations, not heads. If no HOD matches, the row goes out owner-blank flagged
+   `no HOD for <department>` — never guessed.
 Due dates ONLY if the meeting stated one — never invented. Every task's Source field
 carries the transcript link.
 

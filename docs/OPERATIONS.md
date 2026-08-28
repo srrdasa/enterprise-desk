@@ -28,6 +28,11 @@
   Required custom fields not yet created on either list — `python3
   scripts/clickup.py missing` prints the exact set (ClickUp UI only; the API
   cannot create fields).
+- Whimsical workspace "DMT" (connector, enabled in chat 2026-08-28): org chart —
+  https://whimsical.com/7M4QFiT2MCLRaZG8HT6eBC. A MIRROR of
+  boards/mindmaps/org-structure-2026-08-28.md, which is itself generated from
+  docs/ORG-STRUCTURE.md. Never hand-edit the board: /mindmap regenerates it and
+  the edit is lost. Fix the org file, re-run /mindmap.
 - Notion (Principal's own workspace, "Mukunda Charana Dasa's Space", reached via his
   **Notion connector** — a different auth path from the registers integration token):
   Org Structure editing surface —
