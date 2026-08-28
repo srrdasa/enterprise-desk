@@ -1,19 +1,40 @@
-# Operations Manual — FILL THIS IN before first use
+# Operations Manual — MKCD Desk
 
-## 1. Identity (the desk cannot run on placeholders)
-- Principal: <name> · Slack ID <Uxxxx> · mailboxes: <gmail addr>, <outlook addr>
-- Desk posts as: <DESK_NAME> (<icon>) · bot ID <Uxxxx>
-- Timezone: <tz> (DESK_TZ_OFFSET_MIN=<n>)
+## 1. Identity
+- Principal: **Mukunda Dasa** — runs the **HKGT DMT** (Hare Krishna Golden Temple
+  Digital Marketing Team). Slack ID: env `PRINCIPAL_SLACK_ID` — his HUMAN member ID
+  (Slack profile → ⋮ → Copy member ID), NEVER the bot's own ID `[[unverified: value
+  not yet set in env]]`. Mailboxes: `[[unverified: Gmail/Outlook addresses pending
+  from the Principal]]`.
+- **The organisation's name is exactly "HKGT DMT" or the full name above — no other
+  abbreviation, ever.** A four-letter form starting with the same letters that names
+  a DIFFERENT organisation appeared in an early draft; the contamination grep
+  (README of the build) hard-fails on it, so it is never written anywhere in this
+  repo, including here.
+- Desk posts as: **MKCD Desk** (env DESK_NAME) · bot user `U0BTF7PP4MP`
+  (DESK_BOT_ID) · bot app `B0BTBC3MUB0`. Signs: **"Hare Krishna — MKCD Desk"**.
+- Timezone: IST (DESK_TZ_OFFSET_MIN=330).
+- The maintainer (external to HKGT DMT) builds and fixes the desk and pushes to
+  `main`; he appears in NO drafts, NO org structure, NO outputs. Principal decisions
+  and approvals flow through him.
 
 ## 2. Infrastructure map
-- Notion workspace: <link> · Tasks DB: <link> · Ideas DB: <link> · Registers: <links>
-- Slack workspace(s): <name(s)> · digest channel: <#channel Cxxxx> ·
-  ideas channel: <#channel Cxxxx> · leadership routing (if any): <#channel>
-- Drive filing root: <folder link> · restricted folder: <link>
-- Otter account: <email>
+- ClickUp: Tasks list `901616685481` · Ideas list `901616685482`
+  (docs/CLICKUP-SCHEMA.md).
+- Notion registers parent ("MKCD Desk Registers"): **PENDING** — env pair not set;
+  setup is §0 of docs/NOTION-REGISTERS.md (the Principal's 5 minutes). Record the
+  four register page links here the day they exist.
+- Slack workspace: hkgtdmt.slack.com · welcome/announcements: #team-announcements
+  `[[unverified: channel ID pending first roster fetch]]` · digest channel + ideas
+  channel: `[[unverified: to be confirmed by the Principal]]`.
+- Drive filing root / restricted folder: `[[unverified: pending]]`.
+- Otter account: the Principal's (connector-bound, his Claude account).
+- NO Atlassian/Confluence anywhere in this desk — any reference, env var, check or
+  connector expecting one is leftover contamination to REMOVE, not satisfy.
 
 ## 3. Channel routing
-Who gets addressed where (seniority routing, if it applies): <fill in>
+ClickUp = tasks & ideas; Slack = discussion; registers = Notion. Person-wise routing:
+`[[unverified: to be filled from ORG-STRUCTURE.md once confirmed]]`.
 
 ## 4. Bootstrap for a fresh session
 1. Clone this repo; env vars arrive from the cloud environment.
