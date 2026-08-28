@@ -36,7 +36,8 @@ promote / park / merge / kill. The cadence is the deliverable, not the database.
 
 ## Layout
 CLAUDE.md — binding rules (capped file; read it) · routines/ — the two loop prompts ·
-.claude/commands/ — /desk /pending /idea-intake /idea-review /meeting ·
+.claude/commands/ — /desk /pending /idea-intake /idea-review /meeting /mindmap ·
 scripts/ — ClickUp/Notion/Slack helpers, audits, sweeps, board renderer ·
-docs/ — schema, secrets, ops manual, voice · boards/ — generated idea board ·
+docs/ — schema, secrets, ops manual, voice · boards/ — generated idea board +
+mindmaps/ (both GENERATED — never hand-edit) ·
 logs/ — the edits log (the desk's only objective quality score).
