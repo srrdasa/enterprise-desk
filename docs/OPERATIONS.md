@@ -32,9 +32,11 @@
   setup is §0 of docs/NOTION-REGISTERS.md (the Principal's 5 minutes). Record the
   four register page links here the day they exist.
 - Slack workspace: hkgtdmt.slack.com · welcome/announcements: **#all-hkgt-dmt**
-  `C0BLXK2R279` (no #team-announcements exists; this is the workspace-wide default
-  channel — proposed 2026-08-28, awaiting the Principal's confirmation; the bot is
-  not yet a member and must join before posting) · digest channel + ideas channel:
+  `C0BLXK2R279` — CONFIRMED by the Principal 2026-08-28 (no #team-announcements
+  exists; this is the workspace-wide default channel). Desk bot joined and posted
+  the welcome message there as "MKCD Desk"
+  (`https://hkgtdmt.slack.com/archives/C0BLXK2R279/p1787939569077109`).
+  · digest channel + ideas channel:
   `[[unverified: to be confirmed by the Principal]]`. Other public channels:
   #social `C0BM9L2ETS9`, #new-channel `C0BMEU22DKK` (bot is a member of both).
 - Drive filing root / restricted folder: `[[unverified: pending]]`.
