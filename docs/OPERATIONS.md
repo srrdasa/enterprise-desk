@@ -51,6 +51,13 @@ ClickUp = tasks & ideas; Slack = discussion; registers = Notion. Person-wise rou
    next-pull, not hot-reload: a session that already loaded CLAUDE.md keeps its loaded
    copy until it pulls and re-reads.
 
-## 5. Learnings
+## 5. Learnings & standing gates
+STANDING GATES (active from 2026-08-28; each is relaxed ONLY by the Principal — the
+desk never decides it has earned trust; relaxations are recorded here with a date):
+1. **Meeting-task approval gate** — first two weeks of /meeting: the full proposed
+   batch is approved row-by-row before anything is created (see /meeting).
+2. **Evernote calibration gate** — first triage batch is exactly 100 notes; the
+   Principal corrects the taxonomy before any bulk run (see /evernote-triage).
+
 (Append operational learnings here as they are earned — with dates. Rules graduate to
 CLAUDE.md only under its cap discipline, at three instances sharing a root cause.)

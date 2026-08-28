@@ -19,3 +19,26 @@ propose all updates for approval (rule 2 — never auto-applied), file approved 
 draft the summary post. Speaker labels are NOT identity — resolve every name against
 the Contacts register before it enters a draft (rule 12). Numbers are extracted and
 marked claimed-by-them until a system confirms (rule 9).
+
+## ASSIGNMENT STEP — every action item gets an owner before it gets filed
+Owner resolution, in strict order:
+1. **Explicit name in the transcript wins** — resolved through the Contacts register
+   (speaker labels are not identity; an unresolvable name is a red flag to raise,
+   never a guess).
+2. Otherwise **department-of-topic → that department's HOD**, flagged
+   `by department inference` on the proposed row. Departments and HODs come ONLY
+   from a docs/ORG-STRUCTURE.md whose header says **CONFIRMED** — a DRAFT org file
+   means no inference: the row goes out owner-blank for the Principal to fill.
+Due dates ONLY if the meeting stated one — never invented. Every task's Source field
+carries the transcript link.
+
+**Granularity:** a body of work assigned to a department is ONE parent task to its
+HOD — decomposition is the HOD's call unless the meeting named people to pieces.
+(Calibration: "25 campaigns for Sri Krishna Janmashtami with a deadline" = ONE parent
+task to the Digital Marketing HOD with the deadline, not 25 tasks.)
+
+## APPROVAL GATE — first two weeks (relaxed only by the Principal, never by the desk)
+Nothing is created in ClickUp from a transcript until the FULL proposed batch — one
+row per task: title · owner (+ inference flag) · due · priority · source — is
+approved row-by-row. Corrections apply to the batch, then it files in the same turn.
+Gate start date and any relaxation are recorded in docs/OPERATIONS.md §5.
