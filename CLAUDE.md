@@ -13,15 +13,17 @@ If a cap is reached, something is DELETED before anything is added. Build a gold
 is caught, not felt.
 
 **Source of truth for the process is THIS REPO** — this file for binding rules,
-`docs/OPERATIONS.md` for the infrastructure map and bootstrap. Live *state* is Notion:
-the Tasks database (env `NOTION_TASKS_DB`) and the Ideas database (`NOTION_IDEAS_DB`),
-schemas in `docs/NOTION-SCHEMA.md`. Never build a second registry of live state in this
-repo — a generated view (like `boards/idea-board.md`) is fine because it is regenerated
-from Notion, never hand-edited. Right in one place beats present in two.
+`docs/OPERATIONS.md` for the infrastructure map and bootstrap. Live *state* is ClickUp:
+the Tasks list (env `CLICKUP_TASKS_LIST`) and the Ideas list (`CLICKUP_IDEAS_LIST`),
+schema in `docs/CLICKUP-SCHEMA.md`; registers live in Notion (`docs/NOTION-REGISTERS.md`).
+Never build a second registry of live state in this repo — a generated view (like
+`boards/idea-board.md`) is fine because it is regenerated from ClickUp, never
+hand-edited. Right in one place beats present in two.
 
 ## What this desk does
 Runs the Principal's enterprise operations:
-- **Notion** — task tracker + idea pipeline (REST via `scripts/notion.py`, env token).
+- **ClickUp** — task tracker + idea pipeline (REST via `scripts/clickup.py`, env token).
+- **Notion** — registers & knowledge layer only (REST via `scripts/notion.py`).
 - **Slack** — the Principal's workspace(s); bot posts via `scripts/slack.py` as
   `DESK_NAME`. The bot token reads channels; the Principal's personal DMs need the
   user-scoped Slack connector.
@@ -44,8 +46,8 @@ Runs the Principal's enterprise operations:
    in the SAME turn, and **anything with a time attached becomes a CALENDAR EVENT
    immediately** — not a line in a task description.
 3. **Incoming originals** (chat/Slack/email files) are saved to Drive (restricted if
-   sensitive), recorded in Notion WITH the link; upload links surfaced in chat.
-4. **Track every to-do in the Notion Tasks DB** with Owner, Priority, Due. Dedupe
+   sensitive), recorded in the tracker WITH the link; upload links surfaced in chat.
+4. **Track every to-do in the ClickUp Tasks list** with Owner, Priority, Due. Dedupe
    before creating — and dedupe on resolution too: when closing an item, check for open
    siblings on the same topic and resolve them together.
 5. **Loud zero — silence is the bug.** Every automated leg reports its counts every
@@ -82,7 +84,7 @@ Runs the Principal's enterprise operations:
    kill; nothing may skip a decision twice; kill is archive with a reason, never delete.
    Promotion is the only moment an idea acquires a due date.
 9. **Fact discipline.** Before any prose, every factual assertion gets a source:
-   `NOTION:<url>` · `MAIL:<subject/date>` · `SLACK:<permalink>` · `OPERATOR` ·
+   `CLICKUP:<url>` · `NOTION:<url>` · `MAIL:<subject/date>` · `SLACK:<permalink>` · `OPERATOR` ·
    `UNVERIFIED` · `INFERRED` (record what from). Never restate a date, name or number
    from memory of an earlier turn — re-read from source. A counterparty's claim is
    `claimed-by-them`, never rendered as fact ("X reports it is sent", not "it is
@@ -101,7 +103,7 @@ Runs the Principal's enterprise operations:
 11. **Credentials.** Never in any output, ever. Sharing with an external party travels
    over EMAIL with the Principal marked/cc — never chat. Every credential-sharing
    event any sweep surfaces (either direction) is recorded in the Credential-Sharing
-   Register (a Notion page — create per `docs/NOTION-SCHEMA.md`): what system, by
+   Register (a Notion page — create per `docs/NOTION-REGISTERS.md`): what system, by
    whom, to whom, when, over which channel — NEVER the value. A credential sent over
    chat is an exposure to flag and rotate. Read the register BEFORE naming a holder in
    any chase — chasing the wrong person teaches them the list is unreliable.
@@ -124,7 +126,8 @@ Runs the Principal's enterprise operations:
 ## Credentials (NEVER commit)
 Required environment variables (cloud environment settings, GitHub Actions secrets,
 or a secret manager via the SessionStart hook — see `docs/SECRETS-SETUP.md`):
-`NOTION_API_KEY` · `NOTION_TASKS_DB` · `NOTION_IDEAS_DB` · `SLACK_BOT_TOKEN`
+`CLICKUP_API_TOKEN` · `CLICKUP_TASKS_LIST` · `CLICKUP_IDEAS_LIST` · `SLACK_BOT_TOKEN`
+(+ registers layer `NOTION_API_KEY`, `NOTION_REGISTERS_PAGE` — pending is legal)
 (+ optional `SLACK_BOT_TOKEN_2`, `DESK_NAME`, `DESK_ICON`, `DESK_BOT_ID`,
 `PRINCIPAL_SLACK_ID`, `DESK_TZ_OFFSET_MIN`).
 Helpers in `scripts/` read only these env vars. Plaintext token files are forbidden.
@@ -138,7 +141,7 @@ One-per-cadence is a hard invariant: never a second enabled schedule for the sam
 cadence — duplicated schedules double-post digests and double-write the tracker.
 Connectors (Gmail, Outlook, Otter, Slack, Drive, Calendar) are ticked ON THE ROUTINE
 at creation. A Routine is not accepted until a test-fire confirms: repo clones, env
-vars present, Notion + Slack auth PASS, connectors enabled-in-chat.
+vars present, ClickUp + Slack auth PASS, connectors enabled-in-chat.
 
 ## Using this in a NEW SESSION
 First message, verbatim:

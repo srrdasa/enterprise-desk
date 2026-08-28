@@ -3,8 +3,9 @@ Paste the block below as the Routine's prompt.
 
 ---
 Run the weekly verification pass (context/credentials in this session):
-0. TOOLING — same as the daily loop step 0: Notion + Slack via env-var scripts,
-   connector legs skip-not-abort, marked in the output.
+0. TOOLING — same as the daily loop step 0: ClickUp + Slack via env-var scripts
+   (Notion only for registers, PENDING legal), connector legs skip-not-abort,
+   marked in the output.
 1. TRACKER HYGIENE — FULL `python3 scripts/tracker_audit.py`. Every finding gets a
    decision this cycle: close it, correct the stale claim (re-verify against the live
    source first — never just re-assert it), merge the duplicate, or renegotiate the
@@ -22,6 +23,7 @@ Run the weekly verification pass (context/credentials in this session):
    include the drafts/unedited/median-ratio line in the weekly summary. If a correction
    pattern hit three instances this week, propose the durable rule for
    docs/VOICE-AND-PREFERENCES.md (rule 10).
-6. OUTPUT — a "Weekly Verification — [date]" Notion page + candid summary to the
+6. OUTPUT — a "Weekly Verification — [date]" page under the Notion registers parent
+   (layer PENDING -> keep the output in the summary and say so) + candid summary to the
    Principal's channel.
 STYLE: short plain messages; no credentials anywhere.

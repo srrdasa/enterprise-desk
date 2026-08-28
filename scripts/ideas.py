@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Idea-pipeline helpers over the Notion Ideas database.
+"""Idea-pipeline helpers over the ClickUp Ideas list.
 
 DESIGN (ported from the originating desk, where these detectors caught a 14-day
 silent intake stop and 27 never-triaged ideas):
-- Notion is the ONLY source of truth for idea state. Nothing here caches to disk;
+- ClickUp is the ONLY source of truth for idea state. Nothing here caches to disk;
   boards/idea-board.md is a GENERATED view, never hand-edited.
 - Dedupe is two-stage: `dedupe_candidates()` is the CHEAP keyword shortlist; the
   semantic judgement is made by the desk READING the candidate pages. A token
@@ -18,7 +18,7 @@ Usage:
 import os, re, sys, datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import notion as N
+import clickup as N
 
 BOARD = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                      'boards', 'idea-board.md')
@@ -66,10 +66,10 @@ def dedupe_candidates(text, pages=None, top=8):
     return scored[:top]
 
 def add_mention(page_id, source):
-    """A recurring idea gains a mention, never a second page."""
-    st, page = N.api('GET', f'/pages/{page_id}')
-    m = (N.r_number(page, 'Mentions') or 1) + 1
-    N.update(page_id, {'Mentions': N.p_number(m)})
+    """A recurring idea gains a mention, never a second entry."""
+    task = N.get_task(page_id)
+    m = (N.r_number(task, 'Mentions') or 1) + 1
+    N.set_field(page_id, N.IDEAS(), 'Mentions', m)
     N.comment(page_id, f'Mention: {_now().date().isoformat()}, {source}')
     return m
 
@@ -143,7 +143,7 @@ def render_board(pages=None):
     n_open = sum(1 for p in pages if is_open(p))
     unscored = len(never_triaged(pages))
     gap = intake_gap_days(pages)
-    head = [f'<!-- GENERATED FROM NOTION by scripts/ideas.py — never hand-edit -->',
+    head = [f'<!-- GENERATED FROM CLICKUP by scripts/ideas.py — never hand-edit -->',
             f'# Idea Board — generated {_now().date().isoformat()}', '',
             f'**{len(pages)} items · {n_open} open · {unscored} unscored · intake gap {gap}d**']
     if gap > 7:

@@ -20,5 +20,6 @@ indistinguishable from a deleted one, except it costs storage and false comfort.
    An idea the Principal skips gets Skips += 1 — it cannot be skipped twice.
 3. RECORD — set Reviewed = today on every idea touched; append the session summary
    (promoted/parked/merged/killed/skipped, one line per decision) as a comment thread
-   on a "Reviews" Notion page, and post the summary to the ideas channel (threaded).
+   on the "Reviews" Notion register page (layer PENDING -> carry as a TODO), and post
+   the summary to the ideas channel (threaded).
 4. REGENERATE — `python3 scripts/ideas.py board`, commit and push.

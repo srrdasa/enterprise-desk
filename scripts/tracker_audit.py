@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tracker hygiene over the Notion Tasks database + idea-pipeline heartbeat.
+"""Tracker hygiene over the ClickUp Tasks list + idea-pipeline heartbeat.
 
 Ported from a desk where every one of these checks exists because its absence cost a
 real message, a stale list, or a silently dead pipeline. The principles carried over:
@@ -11,16 +11,16 @@ real message, a stale list, or a silently dead pipeline. The principles carried 
   priority, days overdue, and how many times the due date has already moved.
 - SILENCE IS THE BUG: the idea pipeline reports its intake gap every run.
 
-Notion has no changelog API, so DUE MOVES are tracked by convention: any due-date
-change goes through `move_due()` below, which increments the `Due moves` number in
-the same call. A date changed any other way is a process violation.
+DUE MOVES are tracked by convention (never trusted to platform history): any
+due-date change goes through `move_due()` below, which increments the `Due moves`
+custom field in the same call. A date changed any other way is a process violation.
 
 Usage: python3 scripts/tracker_audit.py         # all checks
 """
 import os, sys, datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import notion as N
+import clickup as N
 import ideas as I
 
 STALE_DAYS = 5
@@ -33,15 +33,14 @@ def _days_from_today(iso):
     except Exception: return None
 
 def open_tasks():
-    return N.q(N.TASKS(), filter={'and': [
-        {'property': 'Status', 'select': {'does_not_equal': 'Done'}},
-        {'property': 'Status', 'select': {'does_not_equal': 'Deferred'}}]})
+    return [t for t in N.q(N.TASKS()) if not N.is_done_status(t)]
 
-def move_due(page_id, new_iso):
+def move_due(task_id, new_iso):
     """THE ONLY sanctioned way to change a due date: sets Due and increments Due moves."""
-    st, page = N.api('GET', f'/pages/{page_id}')
-    moves = (N.r_number(page, 'Due moves') or 0) + 1
-    return N.update(page_id, {'Due': N.p_date(new_iso), 'Due moves': N.p_number(moves)})
+    task = N.get_task(task_id)
+    moves = (N.r_number(task, 'Due moves') or 0) + 1
+    N.set_due(task_id, new_iso)
+    return N.set_field(task_id, N.TASKS(), 'Due moves', moves)
 
 # ---------------------------------------------------------------- checks
 def check_closure_language_but_open(tasks):
@@ -49,7 +48,7 @@ def check_closure_language_but_open(tasks):
     for t in tasks:
         if I.age_days(N.edited(t)) > 14: continue      # only recently-touched pages
         for c in N.comments(t['id'])[-3:]:
-            txt = ''.join(x.get('plain_text', '') for x in c.get('rich_text', [])).lower()
+            txt = N.c_text(c).lower()
             if any(p in txt for p in DONE_PHRASES):
                 hits.append((t, txt[:90])); break
     if hits:
@@ -104,7 +103,9 @@ def pending_for(owner, max_days_out=7, tasks=None):
     tasks = tasks if tasks is not None else open_tasks()
     out = []
     for t in tasks:
-        if (N.r_select(t, 'Owner') or '').lower() != owner.lower(): continue
+        # Owner match: substring against ALL assignee usernames, so a short name
+        # ("mukunda") matches the ClickUp username it is part of.
+        if owner.lower() not in (N.r_rich(t, 'Owner') or '').lower(): continue
         due = N.r_date(t, 'Due')
         dd = _days_from_today(due) if due else None
         if not (dd is not None and dd <= max_days_out) and N.r_select(t, 'Priority') != 'Highest':

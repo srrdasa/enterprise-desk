@@ -5,8 +5,11 @@ with this repo + the desk cloud environment attached and connectors ticked.
 ---
 Run the daily ops loop (credentials/context in this session):
 0. TOOLING (critical in a fresh session — read before aborting anything):
-   - Notion (tasks + ideas): scripts/notion.py with NOTION_* env vars. A Notion MCP
-     connector is NEVER required — do not block on one.
+   - ClickUp (tasks + ideas): scripts/clickup.py with CLICKUP_* env vars. No ClickUp
+     MCP connector is ever required — do not block on one.
+   - Notion (registers only): scripts/notion.py with NOTION_API_KEY +
+     NOTION_REGISTERS_PAGE. Pair absent = registers layer PENDING: carry register
+     entries as TODOs, say so, continue. A Notion MCP connector is NEVER required.
    - Slack channels (read + post): scripts/slack.py with SLACK_BOT_TOKEN. The Slack
      connector is only needed for the Principal's personal DMs.
    - Gmail / Outlook / Otter / Drive / Calendar steps DO need their connectors enabled
@@ -14,7 +17,7 @@ Run the daily ops loop (credentials/context in this session):
      mark each skipped step "CONNECTOR OFF" in the digest, and RUN EVERYTHING ELSE.
      Never abort the whole loop while the env-var paths work.
    - Verify env vars exist first; if THEY are missing, that alone is a full stop.
-1. TASKS — Notion Tasks DB: due today, overdue, Highest unassigned; group by owner.
+1. TASKS — ClickUp Tasks list: due today, overdue, Highest unassigned; group by owner.
 1a. TRACKER HYGIENE (light) — run `python3 scripts/tracker_audit.py`. Anything CHECK 1
    flags (closure language but still open) gets a decision THIS cycle — close it or say
    why not. Do not let a flagged item sit silently across multiple daily runs.
@@ -40,7 +43,7 @@ Run the daily ops loop (credentials/context in this session):
 3b. OUTLOOK — same sweep on the Microsoft mailbox. The two mailboxes are one inbox to
    this desk: one combined reply-queue in the digest, source-tagged.
 4. INCOMING ORIGINALS — any original doc/file received via chat, Slack or email since
-   last run: save to Drive (sensitive -> restricted), record contents + link in Notion,
+   last run: save to Drive (sensitive -> restricted), record contents + link in the tracker,
    surface every upload link.
 5. TRACK EVERY TO-DO — file EVERY to-do surfaced anywhere in this loop in the Tasks DB
    with Owner/Priority/Due; dedupe first; if done in-run, file then resolve. Nothing

@@ -1,7 +1,7 @@
 # Enterprise Desk — a portable Claude Code operations process
 
 An executive desk that runs on Claude Code: daily communications sweeps (Slack, Gmail,
-Outlook, Otter meetings), a Notion task tracker with hygiene checks that don't let
+Outlook, Otter meetings), a ClickUp task tracker with hygiene checks that don't let
 items rot, an idea pipeline with scoring and a monthly review cadence, drafted-never-
 auto-sent replies, and a voice log that measures itself honestly.
 
@@ -10,8 +10,9 @@ absence cost that desk a real message, a stale list, or a silently dead pipeline
 
 ## Quick start (~1 hour)
 1. **Repo** — push this to a PRIVATE GitHub repo of your own.
-2. **Notion** — create the integration + two databases per `docs/NOTION-SCHEMA.md`.
-   Share both with the integration (page-level permissions — the #1 setup failure).
+2. **ClickUp** — create the two lists + custom fields per `docs/CLICKUP-SCHEMA.md`;
+   Notion is registers-only, per `docs/NOTION-REGISTERS.md` (page-level permissions —
+   the #1 setup failure).
 3. **Slack** — create a bot app per `docs/SECRETS-SETUP.md`, install, invite it to
    the channels it should sweep.
 4. **Identity** — fill in `docs/OPERATIONS.md` §1–3.
@@ -36,6 +37,6 @@ promote / park / merge / kill. The cadence is the deliverable, not the database.
 ## Layout
 CLAUDE.md — binding rules (capped file; read it) · routines/ — the two loop prompts ·
 .claude/commands/ — /desk /pending /idea-intake /idea-review /meeting ·
-scripts/ — Notion/Slack helpers, audits, sweeps, board renderer ·
+scripts/ — ClickUp/Notion/Slack helpers, audits, sweeps, board renderer ·
 docs/ — schema, secrets, ops manual, voice · boards/ — generated idea board ·
 logs/ — the edits log (the desk's only objective quality score).

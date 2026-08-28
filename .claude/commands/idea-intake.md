@@ -33,12 +33,13 @@ Be a reviewer, not a summariser: name what a source actually says; short-form vi
 a signal to check against primary sources, never a direct input to a decision; flag
 rights/licensing exposure before any adoption.
 
-## 4. DEDUPE, THEN FILE — Notion Ideas DB
+## 4. DEDUPE, THEN FILE — ClickUp Ideas list
 Run `ideas.dedupe_candidates(text)` for the keyword shortlist, READ the candidate
 pages, judge semantically. Same idea → `ideas.add_mention(page_id, source)` — Mentions
 increments and a comment records when/where; NEVER a second page. Genuinely new →
-create the page: Name, State=Open, ICE, Mentions=1, Category, Disposition, Source
-(person + channel + date), body = links with resolved titles + the five fields.
+create the entry (`clickup.create_task` on the Ideas list): Name, State=Open, ICE,
+Mentions=1, Category (tags), Disposition, Source (person + channel + date),
+description = links with resolved titles + the five fields.
 
 ## 5. POST — the ideas channel
 One post per idea group carrying the disposition and honest caveats — not a link

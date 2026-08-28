@@ -14,7 +14,7 @@ another's reading; the value is four independent readings compared afterwards:
   4. IDEAS — long-horizon intent → /idea-intake, never a dated task.
 Where a per-attendee view is wanted, one agent per PERSON.
 
-Then consolidate: archive the verbatim transcript (Drive/Notion, link recorded),
+Then consolidate: archive the verbatim transcript (Drive, link recorded in the tracker),
 propose all updates for approval (rule 2 — never auto-applied), file approved items,
 draft the summary post. Speaker labels are NOT identity — resolve every name against
 the Contacts register before it enters a draft (rule 12). Numbers are extracted and

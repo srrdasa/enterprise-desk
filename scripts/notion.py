@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Notion REST helper — the desk's tracker layer. Reads NOTION_API_KEY from the
-environment ONLY, never from files.
+"""Notion REST helper — the desk's REGISTERS & knowledge layer (the tracker is
+ClickUp — scripts/clickup.py). Reads NOTION_API_KEY from the environment ONLY,
+never from files.
 
-Two databases are required (create them per docs/NOTION-SCHEMA.md and share BOTH
-with the integration — Notion permissions are PAGE-LEVEL: an unshared database
-returns empty results or 404, silently):
-  NOTION_TASKS_DB — the task tracker
-  NOTION_IDEAS_DB — the idea pipeline
+One page is required (docs/NOTION-REGISTERS.md — share it with the integration:
+Notion permissions are PAGE-LEVEL, an unshared page silently 404s):
+  NOTION_REGISTERS_PAGE — parent of the register pages (Credential-Sharing,
+  Contacts, Reviews, Weekly Verification)
 
 Usage: from notion import api, q, create, update, comment, ...
 """
@@ -15,7 +15,7 @@ import os, json, time, urllib.request, urllib.error
 BASE = 'https://api.notion.com/v1'
 VER = '2022-06-28'
 
-def _dbid(env):
+def _pageid(env):
     v = os.environ.get(env, '')
     if not v:
         raise SystemExit(f'{env} is not set — see docs/SECRETS-SETUP.md')
@@ -101,5 +101,9 @@ def created(page): return page.get('created_time', '')
 def edited(page):  return page.get('last_edited_time', '')
 def url(page):     return page.get('url', '')
 
-TASKS = lambda: _dbid('NOTION_TASKS_DB')
-IDEAS = lambda: _dbid('NOTION_IDEAS_DB')
+REGISTERS = lambda: _pageid('NOTION_REGISTERS_PAGE')
+
+def registers_available():
+    """True when the registers layer is configured (env pair present)."""
+    return bool(os.environ.get('NOTION_API_KEY') and
+                os.environ.get('NOTION_REGISTERS_PAGE'))
