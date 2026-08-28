@@ -7,11 +7,21 @@ The assignment engine reads ONLY a CONFIRMED version of this file.
 https://app.notion.com/p/3ca81bf463b48175b6b9cf9138a06a84 (created 2026-08-28 via
 his Notion connector, NOT the registers integration token, so `scripts/notion.py`
 cannot read it; the desk reads it back through the connector on request). That page
-carries a "✏️ Correction" column which wins over the inferred values. THIS file is
-what the desk actually reads — the desk re-reads the Notion page on the Principal's
-word, applies each correction here, flips this header to CONFIRMED with the date,
-and commits. Corrections may also be given in chat by row number ("3: HOD Graphics
-· 7: guest, skip").
+carries two Principal-owned columns — **"✏️ Department"** (the real department name,
+spelled consistently; `skip` excludes the person from the desk entirely) and
+**"✏️ Designation"** (the real designation; `HOD` marks a department head, which is
+the token the meeting assignment engine matches on for department-inferred routing).
+Both override every inferred value.
+
+THIS file is what the desk actually reads — the desk re-reads the Notion page on the
+Principal's word, writes ✏️ Department into the Department column and ✏️ Designation
+into a Designation column here, flips this header to CONFIRMED with the date, and
+commits. Corrections may also be given in chat by row number ("3: Graphics, HOD ·
+7: skip").
+
+NOTE: the "Role" column below is the ClickUp PERMISSION level (owner/admin/member/
+guest) — evidence, not a job title. It is never overwritten by ✏️ Designation; the
+designation lands in its own column when the Principal's edits are applied.
 
 | # | Name | ClickUp ID | Email | Slack ID | Department (inferred) | Role | Confidence | Evidence |
 |---|---|---|---|---|---|---|---|---|
