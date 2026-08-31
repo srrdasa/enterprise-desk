@@ -51,8 +51,12 @@
   setup is §0 of docs/NOTION-REGISTERS.md (the Principal's 5 minutes). Record the
   four register page links here the day they exist.
 - Slack workspace: hkgtdmt.slack.com · welcome/announcements: **#all-hkgt-dmt**
-  `C0BLXK2R279` — CONFIRMED by the Principal 2026-08-28 (no #team-announcements
-  exists; this is the workspace-wide default channel). Desk bot joined and posted
+  `C0BLXK2R279` — CONFIRMED by the Principal 2026-08-28; this is the workspace-wide
+  default channel. **CORRECTION 2026-08-31:** a **#team-announcements** DOES exist
+  (`C0BTD0ATGR0`, PRIVATE, created 2026-08-28 10:51 by the Principal). The 2026-08-28
+  check missed it because it listed `types=public_channel` only — ALWAYS list
+  `public_channel,private_channel`. Which of the two is the announcements channel is
+  the Principal's call; the welcome went to #all-hkgt-dmt. Desk bot joined and posted
   the welcome message there as "MKCD Desk"
   (`https://hkgtdmt.slack.com/archives/C0BLXK2R279/p1787939569077109`).
   · digest channel + ideas channel:

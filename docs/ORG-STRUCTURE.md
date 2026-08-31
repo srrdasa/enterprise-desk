@@ -25,13 +25,13 @@ escalation and for chasing through a line manager; it does NOT override HOD rout
 | 5 | G Sai Kiran | Digital Marketing | Tele Caller for Failed Transactions | Hem Chand Tunga | — not in ClickUp | — |
 | 6 | Himanshu Bisoyi | Digital Marketing | Web Developer | Hem Chand Tunga | webdeveloper@hkmhyderabad.org | U0BSXM1A1L7 |
 | 7 | Venkatesh | Digital Marketing | PPC | Hem Chand Tunga | dme1@hkmhyderabad.org | — |
-| 8 | Sumanth | Digital Marketing | SEO | Hem Chand Tunga | seo@hkmhyderabad.org | — |
+| 8 | Sumanth | Digital Marketing | SEO | Hem Chand Tunga | seo@hkmhyderabad.org | U0BTN755X1B |
 | 9 | MAHA BHUJA DASA | Digital Marketing | Senior Manager | Shruthadeva Dasa | mhbd@hkmhyderabad.org | U0BTGRHEYEQ |
-| 10 | Saci Ku Gauranga Dasa | Digital Marketing | CRM Executive | MAHA BHUJA DASA | skgd@hkmhyderabad.org | — |
+| 10 | Saci Ku Gauranga Dasa | Digital Marketing | CRM Executive | MAHA BHUJA DASA | skgd@hkmhyderabad.org | U0BTQH2GN4R |
 | 11 | Satish Maddela | Online Communications & Graphics | Manager | Mukunda Dasa | satish.maddela@hkmhyderabad.org | — |
 | 12 | Shashank | Online Communications & Graphics | Video Editor | Satish Maddela | — not in ClickUp | — |
 | 13 | Chenna Reddy | Online Communications & Graphics | Photographer & Videographer | Satish Maddela | — not in ClickUp | — |
-| 14 | venugopal | Online Communications & Graphics | Content Writer | Satish Maddela | conwri@hkmhyderabad.org | — |
+| 14 | venugopal | Online Communications & Graphics | Content Writer | Satish Maddela | conwri@hkmhyderabad.org | U0BTJ1H5HB8 |
 | 15 | Vishnu | Online Communications & Graphics | Video Editor | Satish Maddela | editor1@hkmhyderabad.org | — |
 | 16 | Akhil | Online Communications & Graphics | Social Media Executive | Satish Maddela | sme@hkmhyderabad.org | — |
 | 17 | Bharath Vamshi | Online Communications & Graphics | Video Editor | Satish Maddela | asb.vamshi@hkmhyderabad.org | U0BTFS3PP4J |
@@ -66,7 +66,7 @@ escalation and for chasing through a line manager; it does NOT override HOD rout
 | 46 | Deepak kumar | Yatra | Admin | Sai Vardhan (Yatra) | deepak.v@hkmhyderabad.org | U0BTHE6D1RP |
 | 47 | Arjuna Bandhu Dasa _(ClickUp: Arjunabandhudas)_ | Yatra | Yatra Guide | Sai Vardhan (Yatra) | arbd@hkmhyderabad.org | — |
 | 48 | Rajendra Prasad | HR | HR Manager | Mukunda Dasa | — not in ClickUp | — |
-| 49 | Gnaneshwar Parishetty | HR | HR Executive | Rajendra Prasad | hrexec-dmt@hkmhyderabad.org | — |
+| 49 | Gnaneshwar Parishetty | HR | HR Executive | Rajendra Prasad | hrexec-dmt@hkmhyderabad.org | U0BTQSGD5B8 |
 | 50 | Bala Mukunda Dasa | AI | AI Implementation Manager | Mukunda Dasa | — not in ClickUp | — |
 | 51 | Sai | ERP | ERP Developer | Mukunda Dasa | — not in ClickUp | — |
 
