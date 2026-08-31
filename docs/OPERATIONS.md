@@ -58,6 +58,11 @@
   · digest channel + ideas channel:
   `[[unverified: to be confirmed by the Principal]]`. Other public channels:
   #social `C0BM9L2ETS9`, #new-channel `C0BMEU22DKK` (bot is a member of both).
+  **Nine PRIVATE department channels created 2026-08-28** — one per board department,
+  `dmt-` prefixed; IDs in docs/ORG-STRUCTURE.md. Membership = Principal + desk bot +
+  the department's Slack-matched people (6 of 51). Private channels are NOT
+  discoverable: an uninvited person cannot find or join one, so they stay empty until
+  their team is in Slack. `All Depts` has no channel by design.
 - Drive filing root / restricted folder: `[[unverified: pending]]`.
 - Otter account: the Principal's (connector-bound, his Claude account).
 - NO Atlassian/Confluence anywhere in this desk — any reference, env var, check or

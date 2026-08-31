@@ -16,59 +16,59 @@ escalation and for chasing through a line manager; it does NOT override HOD rout
 
 ## Roster
 
-| # | Name | Department | Designation | Reports to | ClickUp ID | Email | Slack ID |
-|---|---|---|---|---|---|---|---|
-| 1 | Mukunda Dasa | All Depts | HOD | — (HOD) | 100877577 | mkcd@hkmhyderabad.org | U0BN7BW55C0 |
-| 2 | Mukunda Prabhu Exe Asst | All Depts | Executive Assistant | Mukunda Dasa | 100910556 | dmt@hkmhyderabad.org | — |
-| 3 | Shruthadeva Dasa | Digital Marketing | Digital Marketing Incharge | Mukunda Dasa | — | — | — |
-| 4 | Hem Chand Tunga | Digital Marketing | Marketing Manager | Shruthadeva Dasa | 100828205 | manager@hkmhyderabad.org | — |
-| 5 | G Sai Kiran | Digital Marketing | Tele Caller for Failed Transactions | Hem Chand Tunga | — | — | — |
-| 6 | Himanshu Bisoyi | Digital Marketing | Web Developer | Hem Chand Tunga | 100908348 | webdeveloper@hkmhyderabad.org | U0BSXM1A1L7 |
-| 7 | Venkatesh | Digital Marketing | PPC | Hem Chand Tunga | 218543610 | dme1@hkmhyderabad.org | — |
-| 8 | Sumanth | Digital Marketing | SEO | Hem Chand Tunga | 100908337 | seo@hkmhyderabad.org | — |
-| 9 | MAHA BHUJA DASA | Digital Marketing | Senior Manager | Shruthadeva Dasa | 260630579 | mhbd@hkmhyderabad.org | U0BTGRHEYEQ |
-| 10 | Saci Ku Gauranga Dasa | Digital Marketing | CRM Executive | MAHA BHUJA DASA | 100908340 | skgd@hkmhyderabad.org | — |
-| 11 | Satish Maddela | Online Communications & Graphics | Manager | Mukunda Dasa | 101054675 | satish.maddela@hkmhyderabad.org | — |
-| 12 | Shashank | Online Communications & Graphics | Video Editor | Satish Maddela | — | — | — |
-| 13 | Chenna Reddy | Online Communications & Graphics | Photographer & Videographer | Satish Maddela | — | — | — |
-| 14 | venugopal | Online Communications & Graphics | Content Writer | Satish Maddela | 100937968 | conwri@hkmhyderabad.org | — |
-| 15 | Vishnu | Online Communications & Graphics | Video Editor | Satish Maddela | 101043738 | editor1@hkmhyderabad.org | — |
-| 16 | Akhil | Online Communications & Graphics | Social Media Executive | Satish Maddela | 101043740 | sme@hkmhyderabad.org | — |
-| 17 | Bharath Vamshi | Online Communications & Graphics | Video Editor | Satish Maddela | 95095479 | asb.vamshi@hkmhyderabad.org | U0BTFS3PP4J |
-| 18 | Praveen | Online Communications & Graphics | Senior Designer | Satish Maddela | 95095480 | praveen.v@hkmhyderabad.org | U0BU7CS2JN4 |
-| 19 | Sai Vardhan | Tele Sales | Tele Sales Manager | Mukunda Dasa | — | — | — |
-| 20 | Vikash Kumar | Tele Sales | Senior Tele Sales Executive | Sai Vardhan | — | — | — |
-| 21 | Sri Lakshmi | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
-| 22 | Sai Kumar | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
-| 23 | Narsing Rao | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
-| 24 | Sai Kiran | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
-| 25 | Raja Shekhar | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
-| 26 | Sharath | Tele Sales | Tele Sales Executive | Sai Vardhan | — | — | — |
-| 27 | Sudhir | Fund Raising | FR Preacher | Mukunda Dasa | — | — | — |
-| 28 | Nama Prabhu | Fund Raising | FR Preacher | Mukunda Dasa | 100909874 | namaprabhu@hkmhyderabad.org | — |
-| 29 | Venkatesh (Auto Driver) | Fund Raising | Auto Driver | Nama Prabhu | — | — | — |
-| 30 | Shiva Vara Prasad | Fund Raising | FR Assistant | Nama Prabhu | — | — | — |
-| 31 | SHARAVAN KUMAR B | Fund Raising | FR Preacher | Mukunda Dasa | 100908345 | sharavan.b@hkmhyderabad.org | — |
-| 32 | Anji | Fund Raising | Auto Driver | SHARAVAN KUMAR B | — | — | — |
-| 33 | CHARAN NELLURU | Fund Raising | FR Assistant | SHARAVAN KUMAR B | 101083310 | preach-asst@hkmhyderabad.org | — |
-| 34 | Naveen R | Fund Raising | DCC Coordinator | Mukunda Dasa | 106800112 | dmt-accounts@hkmhyderabad.org | — |
-| 35 | Suguna Radha Devi Dasii <br><sub>ClickUp: Shree Lakshmi</sub> | Culture Connect | Manager | Mukunda Dasa | 266585199 | sugunaradhadevidasi@gmail.com | — |
-| 36 | Prema Rupa Dasa <br><sub>ClickUp: Prema Rupa dasa</sub> | Culture Connect | Lead Coordinator | Suguna Radha Devi Dasii | 100908346 | yatra1@hkmhyderabad.org | — |
-| 37 | Purushotham | Culture Connect | Office Assistant | Suguna Radha Devi Dasii | — | — | — |
-| 38 | Shivaraj | Culture Connect | Driver | Suguna Radha Devi Dasii | — | — | — |
-| 39 | Amrita Nimai Dasa | Culture Connect | Kirtaniya | Suguna Radha Devi Dasii | — | — | — |
-| 40 | Sudhakar | Culture Connect | Coordinator | Suguna Radha Devi Dasii | — | — | — |
-| 41 | Radha Giridhari Dasa | Culture Connect | Coordinator | Suguna Radha Devi Dasii | — | — | — |
-| 42 | Sashikanta | Culture Connect | Lead Coordinator | Mukunda Dasa | 100918048 | preacher1@hkmhyderabad.org | — |
-| 43 | Sai Vardhan (Yatra) | Yatra | Yatra Manager | Mukunda Dasa | — | — | — |
-| 44 | Hanuma | Yatra | Accounts Executive | Sai Vardhan (Yatra) | — | — | — |
-| 45 | V Naveen Kumar <br><sub>ClickUp: V NAVEEN KUMAR</sub> | Yatra | Accounts Executive | Sai Vardhan (Yatra) | 100908344 | accounts.tridas@hkmhyderabad.org | — |
-| 46 | Deepak kumar | Yatra | Admin | Sai Vardhan (Yatra) | 100908342 | deepak.v@hkmhyderabad.org | U0BTHE6D1RP |
-| 47 | Arjuna Bandhu Dasa <br><sub>ClickUp: Arjunabandhudas</sub> | Yatra | Yatra Guide | Sai Vardhan (Yatra) | 100909875 | arbd@hkmhyderabad.org | — |
-| 48 | Rajendra Prasad | HR | HR Manager | Mukunda Dasa | — | — | — |
-| 49 | Gnaneshwar Parishetty | HR | HR Executive | Rajendra Prasad | 100909505 | hrexec-dmt@hkmhyderabad.org | — |
-| 50 | Bala Mukunda Dasa | AI | AI Implementation Manager | Mukunda Dasa | — | — | — |
-| 51 | Sai | ERP | ERP Developer | Mukunda Dasa | — | — | — |
+| # | Name | Department | Designation | Reports to | Email (ClickUp) | Slack ID |
+|---|---|---|---|---|---|---|
+| 1 | Mukunda Dasa | All Depts | HOD | — (HOD) | mkcd@hkmhyderabad.org | U0BN7BW55C0 |
+| 2 | Mukunda Prabhu Exe Asst | All Depts | Executive Assistant | Mukunda Dasa | dmt@hkmhyderabad.org | — |
+| 3 | Shruthadeva Dasa | Digital Marketing | Digital Marketing Incharge | Mukunda Dasa | — not in ClickUp | — |
+| 4 | Hem Chand Tunga | Digital Marketing | Marketing Manager | Shruthadeva Dasa | manager@hkmhyderabad.org | — |
+| 5 | G Sai Kiran | Digital Marketing | Tele Caller for Failed Transactions | Hem Chand Tunga | — not in ClickUp | — |
+| 6 | Himanshu Bisoyi | Digital Marketing | Web Developer | Hem Chand Tunga | webdeveloper@hkmhyderabad.org | U0BSXM1A1L7 |
+| 7 | Venkatesh | Digital Marketing | PPC | Hem Chand Tunga | dme1@hkmhyderabad.org | — |
+| 8 | Sumanth | Digital Marketing | SEO | Hem Chand Tunga | seo@hkmhyderabad.org | — |
+| 9 | MAHA BHUJA DASA | Digital Marketing | Senior Manager | Shruthadeva Dasa | mhbd@hkmhyderabad.org | U0BTGRHEYEQ |
+| 10 | Saci Ku Gauranga Dasa | Digital Marketing | CRM Executive | MAHA BHUJA DASA | skgd@hkmhyderabad.org | — |
+| 11 | Satish Maddela | Online Communications & Graphics | Manager | Mukunda Dasa | satish.maddela@hkmhyderabad.org | — |
+| 12 | Shashank | Online Communications & Graphics | Video Editor | Satish Maddela | — not in ClickUp | — |
+| 13 | Chenna Reddy | Online Communications & Graphics | Photographer & Videographer | Satish Maddela | — not in ClickUp | — |
+| 14 | venugopal | Online Communications & Graphics | Content Writer | Satish Maddela | conwri@hkmhyderabad.org | — |
+| 15 | Vishnu | Online Communications & Graphics | Video Editor | Satish Maddela | editor1@hkmhyderabad.org | — |
+| 16 | Akhil | Online Communications & Graphics | Social Media Executive | Satish Maddela | sme@hkmhyderabad.org | — |
+| 17 | Bharath Vamshi | Online Communications & Graphics | Video Editor | Satish Maddela | asb.vamshi@hkmhyderabad.org | U0BTFS3PP4J |
+| 18 | Praveen | Online Communications & Graphics | Senior Designer | Satish Maddela | praveen.v@hkmhyderabad.org | U0BU7CS2JN4 |
+| 19 | Sai Vardhan | Tele Sales | Tele Sales Manager | Mukunda Dasa | — not in ClickUp | — |
+| 20 | Vikash Kumar | Tele Sales | Senior Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 21 | Sri Lakshmi | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 22 | Sai Kumar | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 23 | Narsing Rao | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 24 | Sai Kiran | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 25 | Raja Shekhar | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 26 | Sharath | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 27 | Sudhir | Fund Raising | FR Preacher | Mukunda Dasa | — not in ClickUp | — |
+| 28 | Nama Prabhu | Fund Raising | FR Preacher | Mukunda Dasa | namaprabhu@hkmhyderabad.org | — |
+| 29 | Venkatesh (Auto Driver) | Fund Raising | Auto Driver | Nama Prabhu | — not in ClickUp | — |
+| 30 | Shiva Vara Prasad | Fund Raising | FR Assistant | Nama Prabhu | — not in ClickUp | — |
+| 31 | SHARAVAN KUMAR B | Fund Raising | FR Preacher | Mukunda Dasa | sharavan.b@hkmhyderabad.org | — |
+| 32 | Anji | Fund Raising | Auto Driver | SHARAVAN KUMAR B | — not in ClickUp | — |
+| 33 | CHARAN NELLURU | Fund Raising | FR Assistant | SHARAVAN KUMAR B | preach-asst@hkmhyderabad.org | — |
+| 34 | Naveen R | Fund Raising | DCC Coordinator | Mukunda Dasa | dmt-accounts@hkmhyderabad.org | — |
+| 35 | Suguna Radha Devi Dasii _(ClickUp: Shree Lakshmi)_ | Culture Connect | Manager | Mukunda Dasa | sugunaradhadevidasi@gmail.com | — |
+| 36 | Prema Rupa Dasa _(ClickUp: Prema Rupa dasa)_ | Culture Connect | Lead Coordinator | Suguna Radha Devi Dasii | yatra1@hkmhyderabad.org | — |
+| 37 | Purushotham | Culture Connect | Office Assistant | Suguna Radha Devi Dasii | — not in ClickUp | — |
+| 38 | Shivaraj | Culture Connect | Driver | Suguna Radha Devi Dasii | — not in ClickUp | — |
+| 39 | Amrita Nimai Dasa | Culture Connect | Kirtaniya | Suguna Radha Devi Dasii | — not in ClickUp | — |
+| 40 | Sudhakar | Culture Connect | Coordinator | Suguna Radha Devi Dasii | — not in ClickUp | — |
+| 41 | Radha Giridhari Dasa | Culture Connect | Coordinator | Suguna Radha Devi Dasii | — not in ClickUp | — |
+| 42 | Sashikanta | Culture Connect | Lead Coordinator | Mukunda Dasa | preacher1@hkmhyderabad.org | — |
+| 43 | Sai Vardhan (Yatra) | Yatra | Yatra Manager | Mukunda Dasa | — not in ClickUp | — |
+| 44 | Hanuma | Yatra | Accounts Executive | Sai Vardhan (Yatra) | — not in ClickUp | — |
+| 45 | V Naveen Kumar _(ClickUp: V NAVEEN KUMAR)_ | Yatra | Accounts Executive | Sai Vardhan (Yatra) | accounts.tridas@hkmhyderabad.org | — |
+| 46 | Deepak kumar | Yatra | Admin | Sai Vardhan (Yatra) | deepak.v@hkmhyderabad.org | U0BTHE6D1RP |
+| 47 | Arjuna Bandhu Dasa _(ClickUp: Arjunabandhudas)_ | Yatra | Yatra Guide | Sai Vardhan (Yatra) | arbd@hkmhyderabad.org | — |
+| 48 | Rajendra Prasad | HR | HR Manager | Mukunda Dasa | — not in ClickUp | — |
+| 49 | Gnaneshwar Parishetty | HR | HR Executive | Rajendra Prasad | hrexec-dmt@hkmhyderabad.org | — |
+| 50 | Bala Mukunda Dasa | AI | AI Implementation Manager | Mukunda Dasa | — not in ClickUp | — |
+| 51 | Sai | ERP | ERP Developer | Mukunda Dasa | — not in ClickUp | — |
 
 ## Carried, pending the Principal's word — NOT on the current board
 
@@ -83,6 +83,28 @@ other two Graphics people (Praveen, Bharath Vamshi) were carried across into
 rather than a departure. He is retained here, excluded from headcounts, and NOT
 routed to, until the Principal says `Ravi: <department>` or `Ravi: remove`. Deleting a
 live person's record on an ambiguous signal is not reversible from the desk's side.
+
+## Department Slack channels (created 2026-08-28, all PRIVATE)
+
+One private channel per board department. `All Depts` deliberately has none — it is the
+Principal + EA, not a department.
+
+| Channel | ID | Department |
+|---|---|---|
+| #dmt-digital-marketing | C0BTHEG8UBH | Digital Marketing |
+| #dmt-online-comms-graphics | C0BUT6XHB24 | Online Communications & Graphics |
+| #dmt-tele-sales | C0BU0NTS96V | Tele Sales |
+| #dmt-fund-raising | C0BU2FVSDCL | Fund Raising |
+| #dmt-culture-connect | C0BU2FV56GL | Culture Connect |
+| #dmt-yatra | C0BTYQJ09NW | Yatra |
+| #dmt-hr | C0BTSJ7KN1Z | HR |
+| #dmt-ai | C0BUT6Y9YFJ | AI |
+| #dmt-erp | C0BUT6ZLW48 | ERP |
+
+Membership is the Principal + the desk bot + whoever in that department has a Slack ID
+(6 people of 51). PRIVATE channels are NOT discoverable by browsing — a person who is not
+invited cannot find or join one, so each channel stays effectively empty until its team is
+in Slack and invited. Re-run `scripts/org_fetch.py` after people join to pick up their IDs.
 
 ## Reporting lines
 
