@@ -1,10 +1,27 @@
-# Routine — Otter transcript sweep (every 30 min, self-bound)
+# Routine — Otter transcript sweep (hourly, self-bound)
 
-**Cadence:** every 30 minutes · **Target:** fires into ONE persistent session
-(`session_01ExMoskeTKS1LRMszHywEoY`), never a fresh session — the Principal asked for
-continuity so the desk keeps its context and does not re-introduce itself every fire.
+**Routine id:** `trig_01VVjwRPosDAmd7Y9TG4NBBE` · **cron:** `19 * * * *` (hourly,
+anchored to the creation minute so it does not pile onto :00 with every other Routine).
 
-**One-per-cadence invariant:** this is the ONLY 30-minute Routine. A second one would
+**Cadence — 30 minutes was REQUESTED but is NOT AVAILABLE.** The platform enforces a
+1-hour minimum and rejects anything shorter: *"cron expression '*/30 * * * *' may fire
+runs as little as 30 minutes apart; the minimum interval is 1 hour"*. Hourly is the
+closest permitted. Do not "fix" this by adding a second offset Routine — two Routines
+for one cadence breaks the one-per-cadence invariant and double-analyses transcripts.
+
+**Target:** fires into ONE persistent session (`session_01ExMoskeTKS1LRMszHywEoY`),
+never a fresh session — `persist_session: true`. The Principal asked for continuity so
+the desk keeps its context instead of re-introducing itself every fire.
+
+**CONNECTOR CAVEAT — read before trusting this Routine.** It stores NO MCP connectors
+(`mcp_connections: []`). The `connectors` parameter is disabled for this organisation,
+so it cannot be attached from a session. Because the Routine resumes an existing
+session rather than spawning one, it inherits whatever that session holds — but if the
+container is reclaimed and reprovisioned, Otter may come back detached and every fire
+will correctly report `CONNECTOR OFF — 0 swept`. If that persists, recreate the Routine
+from the claude.ai Routines UI with Otter ticked.
+
+**One-per-cadence invariant:** this is the ONLY hourly Routine. A second one would
 double-analyse every transcript and double-post the review.
 
 ## Each fire
@@ -13,7 +30,7 @@ double-analyse every transcript and double-post the review.
 2. List recent Otter transcripts via the Otter connector.
 3. `python3 scripts/otter_ledger.py check <id> ...` — which are NEW.
 4. **If zero new:** print one line — `OTTER sweep: 0 new transcripts (N in ledger)` —
-   and STOP. Do not restate old analysis. At 48 fires a day, a chatty no-op is what
+   and STOP. Do not restate old analysis. At ~24 fires a day, a chatty no-op is what
    makes the Principal stop reading the digest.
 5. **For each new transcript:** read it IN FULL (they run 80k+ characters — read in
    sequential chunks, never skim, and say so if any part could not be read). Extract
