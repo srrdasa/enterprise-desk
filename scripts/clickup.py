@@ -147,11 +147,37 @@ def get_task(task_id):
         raise RuntimeError(f'ClickUp get_task {task_id}: HTTP {st} {r}')
     return r
 
+_MEMBERS = {}
+
+def list_member_ids(list_id):
+    """ClickUp user IDs that can actually be assigned on this list. Cached."""
+    if list_id not in _MEMBERS:
+        st, r = api('GET', f'/list/{list_id}/member')
+        if st != 200:
+            raise RuntimeError(f'ClickUp list {list_id} members: HTTP {st} {r}')
+        _MEMBERS[list_id] = {m['id']: m.get('username') for m in r.get('members', [])}
+    return _MEMBERS[list_id]
+
 def create_task(list_id, name, description='', status=None, priority=None,
                 due_iso=None, assignees=None, tags=None, fields_by_name=None):
     """Create a task. priority is desk vocabulary (Highest/High/Medium/Low);
     fields_by_name = {custom field name: value} set after creation (dropdowns by
-    option name). Returns the created task dict."""
+    option name). Returns the created task dict.
+
+    ASSIGNEE GUARD (rule 5 — silence is the bug): ClickUp accepts a create with an
+    assignee who is not a member of the list, returns HTTP 200, and SILENTLY DROPS
+    the assignee — the task lands ownerless and nobody is told. So membership is
+    checked BEFORE the POST and a non-member raises, naming the person and the fix."""
+    if assignees:
+        members = list_member_ids(list_id)
+        missing = [a for a in assignees if a not in members]
+        if missing:
+            raise RuntimeError(
+                f'ClickUp list {list_id} cannot be assigned to {missing} — they are '
+                f'not members of this list, and ClickUp would drop them silently. '
+                f'Assignable here: {sorted(members.items(), key=lambda x: str(x[1]))}. '
+                f'FIX: share the list\'s Space with them in the ClickUp UI (the v2 '
+                f'API has no add-member endpoint), then re-run.')
     body = {'name': name[:1900], 'description': description}
     if status:   body['status'] = status
     if priority: body['priority'] = DESK_TO_PRIO[priority]

@@ -55,6 +55,13 @@ moment an idea acquires either (rule 8).
   option id); reading returns the option name.
 - List queries page at 100; `q()` walks pages and includes closed tasks — callers
   filter with `is_done_status()`.
+- **Assignees must be MEMBERS of the list.** ClickUp accepts a create carrying a
+  non-member assignee, returns HTTP 200, and silently drops them — the task lands
+  ownerless with no error. `create_task()` therefore checks membership BEFORE the
+  POST and raises, naming the person. The v2 API has NO add-member endpoint (404),
+  so the fix is always in the ClickUp UI: share the Space with them.
+  As of 2026-09-10 the Space "MKCP Assistant" is PRIVATE and only 3 of 51 people
+  can be assigned: Mukunda Dasa, Mukunda Prabhu Exe Asst, MAHA BHUJA DASA.
 
 ## 5. Verify
 `bash scripts/setup_desk.sh` — ClickUp auth + both lists must PASS before anything
