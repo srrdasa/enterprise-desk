@@ -3,7 +3,7 @@
 Regenerated from the Otter connector + `logs/otter-seen.jsonl`. **Never hand-edit.**
 The ledger (`scripts/otter_ledger.py`) is the source of truth for state; this file is the readable roll-up.
 
-Generated 2026-09-14 21:03 UTC · **125 transcripts enumerated** (117h 57m of audio) · **5 processed · 120 PENDING** (112h 52m)
+Generated 2026-09-14 21:10 UTC · **125 transcripts enumerated** (117h 57m of audio) · **6 processed · 119 PENDING** (112h 52m)
 
 > Enumeration stopped at 125 results; the Otter archive continues back beyond 2026-05-21. Re-run with further pagination to extend this view.
 
@@ -11,8 +11,8 @@ Generated 2026-09-14 21:03 UTC · **125 transcripts enumerated** (117h 57m of au
 |---|------|--------|-------|-------|-----|
 | 1 | 2026-09-13 | 29m 13s | **FILED** | Nepal Yatra Logistics and TTT Feedback | `3_39ADFC4U3g7hi2o_f3bjjSawc` |
 | 2 | 2026-09-10 | 2h 45m | **FILED** | Knowledge Graph Meeting Notes | `Rh67ajOEbqEmcKfdLkfNTsC6UGk` |
-| 3 | 2026-09-10 | 2h 15m | **PROPOSED** | SRRD's Meeting Notes | `_XBKjeTensBnEWideVRKk6jJzjw` |
-| 4 | 2026-09-09 | 35m 39s | PENDING | Marketing Strategy Planning | `ikJqwO7OAsML9satwaAHhkBX1is` |
+| 3 | 2026-09-10 | 2h 15m | **FILED** | SRRD's Meeting Notes | `_XBKjeTensBnEWideVRKk6jJzjw` |
+| 4 | 2026-09-09 | 35m 39s | **PROPOSED** | Marketing Strategy Planning | `ikJqwO7OAsML9satwaAHhkBX1is` |
 | 5 | 2026-09-09 | 2h 25m | **FILED** | Office Operations and Strategy | `hP4ONRRVWgFwAvyHDpQwBUPPiqA` |
 | 6 | 2026-09-07 | 1h 23m | PENDING | Tour Itinerary Planning Meeting | `6EL6YzG-ofvlC-St3wKsxr6NnOk` |
 | 7 | 2026-09-07 | 1h 11m | PENDING | Project Funding Strategy Meeting | `Pk0CwdEqjjUT5NM7taKyUEfrTAQ` |
