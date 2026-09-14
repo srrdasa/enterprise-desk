@@ -3,7 +3,7 @@
 Regenerated from the Otter connector + `logs/otter-seen.jsonl`. **Never hand-edit.**
 The ledger (`scripts/otter_ledger.py`) is the source of truth for state; this file is the readable roll-up.
 
-Generated 2026-09-14 21:23 UTC · **125 transcripts enumerated** (117h 57m of audio) · **7 processed · 118 PENDING** (112h 52m)
+Generated 2026-09-14 21:28 UTC · **125 transcripts enumerated** (117h 57m of audio) · **8 processed · 117 PENDING** (112h 52m)
 
 > Enumeration stopped at 125 results; the Otter archive continues back beyond 2026-05-21. Re-run with further pagination to extend this view.
 
@@ -14,8 +14,8 @@ Generated 2026-09-14 21:23 UTC · **125 transcripts enumerated** (117h 57m of au
 | 3 | 2026-09-10 | 2h 15m | **FILED** | SRRD's Meeting Notes | `_XBKjeTensBnEWideVRKk6jJzjw` |
 | 4 | 2026-09-09 | 35m 39s | **FILED** | Marketing Strategy Planning | `ikJqwO7OAsML9satwaAHhkBX1is` |
 | 5 | 2026-09-09 | 2h 25m | **FILED** | Office Operations and Strategy | `hP4ONRRVWgFwAvyHDpQwBUPPiqA` |
-| 6 | 2026-09-07 | 1h 23m | **PROPOSED** | Tour Itinerary Planning Meeting | `6EL6YzG-ofvlC-St3wKsxr6NnOk` |
-| 7 | 2026-09-07 | 1h 11m | PENDING | Project Funding Strategy Meeting | `Pk0CwdEqjjUT5NM7taKyUEfrTAQ` |
+| 6 | 2026-09-07 | 1h 23m | **FILED** | Tour Itinerary Planning Meeting | `6EL6YzG-ofvlC-St3wKsxr6NnOk` |
+| 7 | 2026-09-07 | 1h 11m | **PROPOSED** | Project Funding Strategy Meeting | `Pk0CwdEqjjUT5NM7taKyUEfrTAQ` |
 | 8 | 2026-09-06 | 28m 49s | PENDING | Recruitment and Budget Planning | `1zjASb94GF8yf1ccB4XNg0Gekig` |
 | 9 | 2026-09-06 | 1m 30s | PENDING | Google Meet Setup | `3G9qS6B03I8TLe3qKXqafCAQ200` |
 | 10 | 2026-09-06 | 1h 39m | PENDING | Project Strategy and Team Coordination | `G1fSzX8INkL1O_Ibto-fai_DBSE` |
