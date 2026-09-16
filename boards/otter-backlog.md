@@ -3,7 +3,7 @@
 Regenerated from the Otter connector + `logs/otter-seen.jsonl`. **Never hand-edit.**
 The ledger (`scripts/otter_ledger.py`) is the source of truth for state; this file is the readable roll-up.
 
-Generated 2026-09-15 14:20 UTC · **129 transcripts enumerated** (121h 5m of audio) · **15 processed · 114 PENDING** (112h 52m)
+Generated 2026-09-16 13:20 UTC · **129 transcripts enumerated** (121h 5m of audio) · **15 processed · 114 PENDING** (112h 52m)
 
 > Enumeration stopped at 125 results; the Otter archive continues back beyond 2026-05-21. Re-run with further pagination to extend this view.
 
