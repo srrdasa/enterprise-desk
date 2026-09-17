@@ -3,22 +3,22 @@
 Regenerated from the Otter connector + `logs/otter-seen.jsonl`. **Never hand-edit.**
 The ledger (`scripts/otter_ledger.py`) is the source of truth for state; this file is the readable roll-up.
 
-Generated 2026-09-17 20:20 UTC · **135 transcripts enumerated** (132h 26m of audio) · **21 processed · 114 PENDING** (112h 52m)
+Generated 2026-09-17 21:00 UTC · **135 transcripts enumerated** (132h 26m of audio) · **21 processed · 114 PENDING** (112h 52m)
 
 > Enumeration stopped at 125 results; the Otter archive continues back beyond 2026-05-21. Re-run with further pagination to extend this view.
 
 | # | Date | Length | State | Title | ID |
 |---|------|--------|-------|-------|-----|
-| 1 | 2026-09-17 | 2h 22m | **PROPOSED** | Digital Transformation and Project Management | `2R8QuEvSptPdyuDj-8W4dZMQiTg` |
-| 2 | 2026-09-17 | 2h 52m | **PROPOSED** | Employee Performance Review Meeting | `Y8v1j7bbGdu_DINc23O898qtTV8` |
-| 3 | 2026-09-17 | 55m 21s | **PROPOSED** | Yatra Planning Coordination Meeting | `sh4j6GObXhO2V3n5av6M74h957M` |
+| 1 | 2026-09-17 | 2h 22m | **FILED** | Digital Transformation and Project Management | `2R8QuEvSptPdyuDj-8W4dZMQiTg` |
+| 2 | 2026-09-17 | 2h 52m | **FILED** | Employee Performance Review Meeting | `Y8v1j7bbGdu_DINc23O898qtTV8` |
+| 3 | 2026-09-17 | 55m 21s | **FILED** | Yatra Planning Coordination Meeting | `sh4j6GObXhO2V3n5av6M74h957M` |
 | 4 | 2026-09-17 | 5s | SKIPPED | Note (5s fragment) | `LP2fEbAu2kY93fvTzK9zBPfAGHo` |
-| 5 | 2026-09-16 | 2h 10m | **PROPOSED** | Yatra Project Planning Meeting | `pe5P8rswSvdie31E2leNlvTp2kQ` |
-| 6 | 2026-09-16 | 3h 2m | **PROPOSED** | AI Project Strategy Meeting | `dGPLei--g2xQKhJPIggmLeFew6I` |
-| 7 | 2026-09-15 | 1h 27m | **PROPOSED** | Movie Production and Budgeting Plan | `QNWEVtQuramJGyAjdMqYtnxTo28` |
-| 8 | 2026-09-15 | 1h 24m | **PROPOSED** | Marketing Strategy and Performance Meeting | `0nl56KzeEdt8w5bUUhlY57JGyuE` |
-| 9 | 2026-09-15 | 6m 15s | **PROPOSED** | CCTV and Wi-Fi Camera Requirements | `7ywoNNeWQVkZ7OJYp9_t6uGA8P8` |
-| 10 | 2026-09-15 | 11m 26s | **PROPOSED** | Marketing and Event Logistics Discussion | `xDwlUKk9kQ0AQaMZeQ0s5adIjVQ` |
+| 5 | 2026-09-16 | 2h 10m | **FILED** | Yatra Project Planning Meeting | `pe5P8rswSvdie31E2leNlvTp2kQ` |
+| 6 | 2026-09-16 | 3h 2m | **FILED** | AI Project Strategy Meeting | `dGPLei--g2xQKhJPIggmLeFew6I` |
+| 7 | 2026-09-15 | 1h 27m | **FILED** | Movie Production and Budgeting Plan | `QNWEVtQuramJGyAjdMqYtnxTo28` |
+| 8 | 2026-09-15 | 1h 24m | **FILED** | Marketing Strategy and Performance Meeting | `0nl56KzeEdt8w5bUUhlY57JGyuE` |
+| 9 | 2026-09-15 | 6m 15s | **FILED** | CCTV and Wi-Fi Camera Requirements | `7ywoNNeWQVkZ7OJYp9_t6uGA8P8` |
+| 10 | 2026-09-15 | 11m 26s | **FILED** | Marketing and Event Logistics Discussion | `xDwlUKk9kQ0AQaMZeQ0s5adIjVQ` |
 | 11 | 2026-09-13 | 29m 13s | **FILED** | Nepal Yatra Logistics and TTT Feedback | `3_39ADFC4U3g7hi2o_f3bjjSawc` |
 | 12 | 2026-09-10 | 2h 45m | **FILED** | Knowledge Graph Meeting Notes | `Rh67ajOEbqEmcKfdLkfNTsC6UGk` |
 | 13 | 2026-09-10 | 2h 15m | **FILED** | SRRD's Meeting Notes | `_XBKjeTensBnEWideVRKk6jJzjw` |
@@ -28,7 +28,7 @@ Generated 2026-09-17 20:20 UTC · **135 transcripts enumerated** (132h 26m of au
 | 17 | 2026-09-07 | 1h 11m | **FILED** | Project Funding Strategy Meeting | `Pk0CwdEqjjUT5NM7taKyUEfrTAQ` |
 | 18 | 2026-09-06 | 28m 49s | **FILED** | Recruitment and Budget Planning | `1zjASb94GF8yf1ccB4XNg0Gekig` |
 | 19 | 2026-09-06 | 1m 30s | SKIPPED | Google Meet Setup | `3G9qS6B03I8TLe3qKXqafCAQ200` |
-| 20 | 2026-09-06 | 1h 39m | **PROPOSED** | Project Strategy and Team Coordination | `G1fSzX8INkL1O_Ibto-fai_DBSE` |
+| 20 | 2026-09-06 | 1h 39m | **FILED** | Project Strategy and Team Coordination | `G1fSzX8INkL1O_Ibto-fai_DBSE` |
 | 21 | 2026-09-06 | 1h 23m | PENDING | Workflow Automation Strategy Meeting | `W1f2nlU3O9Z92dhjD9dLixszcXs` |
 | 22 | 2026-09-03 | 7m 38s | PENDING | Inbound Call Issues Review | `_Xze6rIuByng3OIIrxhdtUAlLsI` |
 | 23 | 2026-09-03 | 4h 28m | PENDING | Donation Campaign Coordination | `_gGBzgOxLuZW9hsEWi-_Q8A10I0` |
