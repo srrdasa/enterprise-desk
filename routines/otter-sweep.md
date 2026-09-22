@@ -56,3 +56,13 @@ double-analyse every transcript and double-post the review.
   it from disk; never trust recall of what was processed.
 - **Transcript quality.** Otter mangles Telugu/Hindi passages badly. Mark low-confidence
   items rather than presenting garbled speech as a clean action item.
+
+- **`created_after` hides same-day recordings.** Observed 2026-09-22: a search with
+  `created_after: 2026-09-22` returned nothing, while the identical query with
+  `created_after: 2026-09-21` returned that day's 01:58 UTC recording. The filter is
+  not inclusive of the day it names. **Always sweep with `created_after` set to
+  YESTERDAY**, then discard by ledger check — never by date filter.
+- **`otter_search` is a ranked matcher, not an enumerator.** A narrow query returns
+  only the single best match, so a one-query zero is not a swept zero (rule 5). Use a
+  broad multi-word query (e.g. `meeting discussion team`), which returns the day's
+  recordings, and ledger-check every id it returns.
