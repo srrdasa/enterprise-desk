@@ -3,25 +3,25 @@
 Regenerated from the Otter connector + `logs/otter-seen.jsonl`. **Never hand-edit.**
 The ledger (`scripts/otter_ledger.py`) is the source of truth for state; this file is the readable roll-up.
 
-Generated 2026-09-23 19:20 UTC · **148 transcripts enumerated** (142h 21m of audio) · **34 processed · 114 PENDING** (112h 52m)
+Generated 2026-09-23 19:47 UTC · **148 transcripts enumerated** (142h 21m of audio) · **34 processed · 114 PENDING** (112h 52m)
 
 > Enumeration stopped at 125 results; the Otter archive continues back beyond 2026-05-21. Re-run with further pagination to extend this view.
 
 | # | Date | Length | State | Title | ID |
 |---|------|--------|-------|-------|-----|
-| 1 | 2026-09-22 | 31m 4s | **PROPOSED** | HKM AI Dev | `GYatzNhELDfHkDRJNFgKubEAldY` |
+| 1 | 2026-09-22 | 31m 4s | **FILED** | HKM AI Dev | `GYatzNhELDfHkDRJNFgKubEAldY` |
 | 2 | 2026-09-22 | 7m 1s | SKIPPED | HKM AI Dev (partial, superseded) | `f19DaeC_9qbRGsi_vEgBPQLBn-g` |
-| 3 | 2026-09-21 | 24m 51s | **PROPOSED** | Flight and Travel Planning Discussion | `4vO184BHGYyLtgmBhJtpQaA_Z8o` |
+| 3 | 2026-09-21 | 24m 51s | **FILED** | Flight and Travel Planning Discussion | `4vO184BHGYyLtgmBhJtpQaA_Z8o` |
 | 4 | 2026-09-21 | 5s | SKIPPED | Note (5s fragment) | `bXaDUGBJF1H996g9E96HlMZ3QcQ` |
-| 5 | 2026-09-21 | 9m 56s | **PROPOSED** | Service Proposal and Finalization Update | `RiI0lYdhb8y17u24VSRsXnMWQuw` |
-| 6 | 2026-09-21 | 1h 37m | **PROPOSED** | ISKCON and Blue Machines AI Meeting | `NBaQQZ7ZQUCPzZ5GHLbt7XOiOVY` |
-| 7 | 2026-09-21 | 4m 8s | **PROPOSED** | Meeting Kickoff and Report Search | `C2qxenq8c4zNwvLmF1lCGK13q6M` |
-| 8 | 2026-09-21 | 1h 12m | **PROPOSED** | Eco Village Project — Spiritual and Wellness Retreat Near Ramoji | `fv7kzxsX8rRLqlCMhPQoxTdn69k` |
-| 9 | 2026-09-21 | 14m 31s | **PROPOSED** | Yatra Flight and Weather Contingency Planning | `U0xK7nkG6opcwY9TROkcaCKuyVk` |
-| 10 | 2026-09-20 | 42m 17s | **PROPOSED** | Event Review and Team Management | `Xet8dTWwRP1TtSo2z9VdxJotO3g` |
-| 11 | 2026-09-19 | 2h 27m | **PROPOSED** | Agile, Jira, and Project Management | `H5JUA82xYV4mifAY1Wqlhwt-7gI` |
-| 12 | 2026-09-19 | 1h 59m | **PROPOSED** | Project Management and Notion Integration | `asJWHMjYZ0Z1ufi1tfWMj-TUFRA` |
-| 13 | 2026-09-19 | 26m 24s | **PROPOSED** | Operations and Marketing Strategy Meeting | `uP-XVbesz_L-m4nwq9kTu_DugFI` |
+| 5 | 2026-09-21 | 9m 56s | **FILED** | Service Proposal and Finalization Update | `RiI0lYdhb8y17u24VSRsXnMWQuw` |
+| 6 | 2026-09-21 | 1h 37m | **FILED** | ISKCON and Blue Machines AI Meeting | `NBaQQZ7ZQUCPzZ5GHLbt7XOiOVY` |
+| 7 | 2026-09-21 | 4m 8s | **FILED** | Meeting Kickoff and Report Search | `C2qxenq8c4zNwvLmF1lCGK13q6M` |
+| 8 | 2026-09-21 | 1h 12m | **FILED** | Eco Village Project — Spiritual and Wellness Retreat Near Ramoji | `fv7kzxsX8rRLqlCMhPQoxTdn69k` |
+| 9 | 2026-09-21 | 14m 31s | **FILED** | Yatra Flight and Weather Contingency Planning | `U0xK7nkG6opcwY9TROkcaCKuyVk` |
+| 10 | 2026-09-20 | 42m 17s | **FILED** | Event Review and Team Management | `Xet8dTWwRP1TtSo2z9VdxJotO3g` |
+| 11 | 2026-09-19 | 2h 27m | **FILED** | Agile, Jira, and Project Management | `H5JUA82xYV4mifAY1Wqlhwt-7gI` |
+| 12 | 2026-09-19 | 1h 59m | **FILED** | Project Management and Notion Integration | `asJWHMjYZ0Z1ufi1tfWMj-TUFRA` |
+| 13 | 2026-09-19 | 26m 24s | **FILED** | Operations and Marketing Strategy Meeting | `uP-XVbesz_L-m4nwq9kTu_DugFI` |
 | 14 | 2026-09-17 | 2h 22m | **FILED** | Digital Transformation and Project Management | `2R8QuEvSptPdyuDj-8W4dZMQiTg` |
 | 15 | 2026-09-17 | 2h 52m | **FILED** | Employee Performance Review Meeting | `Y8v1j7bbGdu_DINc23O898qtTV8` |
 | 16 | 2026-09-17 | 55m 21s | **FILED** | Yatra Planning Coordination Meeting | `sh4j6GObXhO2V3n5av6M74h957M` |
