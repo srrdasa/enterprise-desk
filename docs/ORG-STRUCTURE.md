@@ -1,90 +1,222 @@
 # ORG STRUCTURE — HKGT DMT
 
-**STATUS: CONFIRMED — 2026-08-28.**
-Applied from the Principal's Notion editing surface
-(https://app.notion.com/p/3ca81bf463b48175b6b9cf9138a06a84, read back 2026-08-28) —
-his **✏️ Department** and **✏️ Designation** values are written into the Department
-and Designation columns below and override every inferred value. The assignment
-engine reads this file.
+**STATUS: CONFIRMED — 2026-09-23.**
+Source: `Org_Structre_RR_Sep_2026.xlsx`, the Principal's HR org sheet (OPERATOR,
+supplied 2026-09-17; applied and confirmed 2026-09-23). It supersedes the ClickUp-inferred structure confirmed
+2026-08-28: the sheet is authority for name, designation, department and reporting
+line. ClickUp IDs, emails and Slack IDs are carried over from that earlier file for
+the 24 people who matched, and are the ONLY way the desk can assign or @-mention.
 
-**HOD resolution (set by the Principal, 2026-08-28): one HOD for all departments.**
-Row 10, Mukunda Dasa, is `All Depts` / `HOD`. `All Depts` is a WILDCARD — it matches
-every department name in this table. So department-of-topic inference
-(`.claude/commands/meeting.md` ASSIGNMENT STEP 2) resolves to row 10 for Graphics,
-Digital Marketing, Fund Raising, Yatra, HR, Culture Connect and Online
-Communications alike. No department has its own head; that is deliberate, not a gap.
-Do not read a department-level "Manager" or "Senior Manager" designation as an HOD —
-`HOD` is the only token the engine matches.
+**Headcount: 50 on the sheet** (up from 26 tracked in August). 24 carry a desk
+identity; **26 have no ClickUp account known to the desk** and cannot be assigned
+work in the tracker until one is matched.
 
-**Editing surface stays Notion:** the Principal edits the page above; the desk reads
-it back on his word, re-applies both ✏️ columns here, re-dates this header, and
-commits. Corrections may also be given in chat by row number ("3: Graphics, HOD ·
-7: skip"). `skip` in Department excludes a person from the desk entirely.
+## Routing — read this before inferring an owner
 
-NOTE on the two evidence columns, which describe the ORIGINAL automated fetch and are
-NOT a judgement on the confirmed values: **Role** is the ClickUp PERMISSION level
-(owner/admin/member/guest) — never a job title, and never overwritten by Designation.
-**ID match** is how confidently the person was matched to a Slack account by email —
-`high` means a Slack ID was found, `low` means none was. A `low` row's Department and
-Designation are still Principal-confirmed fact.
+`.claude/commands/meeting.md` step 2 routes department-of-topic work to a department
+head. The August rule (one HOD for all departments, `All Depts` as a wildcard) is
+**withdrawn** — this sheet carries real per-department heads and a per-person Manager.
+Do NOT match on the bare token `HOD`: only one person's designation contains it, and
+routing every department to them would be wrong.
 
-| # | Name | ClickUp ID | Email | Slack ID | Department | Designation | Role | ID match | Evidence (fetch 2026-08-28) |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | Akhil | 101043740 | sme@hkmhyderabad.org | — | Online Communications | Social Media Executive | member | low | 4 recent tasks in "MOM Tasks by MKCD / May"; no Slack match found |
-| 2 | Arjunabandhudas | 100909875 | arbd@hkmhyderabad.org | — | Yatra | Yatra Guide | member | low | 124 recent tasks in "Yatra / office works"; no Slack match found |
-| 3 | Bharath Vamshi | 95095479 | asb.vamshi@hkmhyderabad.org | U0BTFS3PP4J | Graphics | Video Editor | member | high | 169 recent tasks in "Graphics Team / Bharth Tasks List"; email match |
-| 4 | CHARAN NELLURU | 101083310 | preach-asst@hkmhyderabad.org | — | Fund Raising | FR Assistant | member | low | 11 recent tasks in "Charan Tasks / daily task"; no Slack match found |
-| 5 | Deepak kumar | 100908342 | deepak.v@hkmhyderabad.org | U0BTHE6D1RP | Yatra | Admin | member | high | 99 recent tasks in "Deepak Tasks / List"; email match |
-| 6 | Gnaneshwar Parishetty | 100909505 | hrexec-dmt@hkmhyderabad.org | — | HR | HR Executive | member | low | 13 recent tasks in "Gnaneshwar Tasks / Daily Tasks"; no Slack match found |
-| 7 | Hem Chand Tunga | 100828205 | manager@hkmhyderabad.org | — | Digital Marketing | Marketing Manager | owner | low | 190 recent tasks in "Daily Tasks / Grenaral Tasks"; no Slack match found |
-| 8 | Himanshu Bisoyi | 100908348 | webdeveloper@hkmhyderabad.org | U0BSXM1A1L7 | Digital Marketing | Web Developer | admin | high | 5 recent tasks in "14.05.2026 MOM TASKS / List"; email match |
-| 9 | MAHA BHUJA DASA | 260630579 | mhbd@hkmhyderabad.org | U0BTGRHEYEQ | Digital Marketing | Senior Manager | admin | high | 72 recent tasks in "MHBD Prabhu Tasks / MHBP Tasks"; email match |
-| 10 | Mukunda Dasa (the Principal) | 100877577 | mkcd@hkmhyderabad.org | U0BN7BW55C0 | All Depts | HOD | admin | high | 72 recent tasks in "24.06.2026 MOM TASKS / List"; email match |
-| 11 | Mukunda Prabhu Exe Asst | 100910556 | dmt@hkmhyderabad.org | — | All Depts | Executive Assistant | admin | low | shared account; 72 recent tasks in "24.06.2026 MOM TASKS / List"; no Slack match found |
-| 12 | Nama Prabhu | 100909874 | namaprabhu@hkmhyderabad.org | — | Fund Raising | FR Preacher | member | low | 34 recent tasks in "24.06.2026 MOM TASKS / List"; no Slack match found |
-| 13 | Naveen R | 106800112 | dmt-accounts@hkmhyderabad.org | — | Fund Raising | DCC Coordinator | member | low | 1 recent task in "Sharavan tasks / List"; no Slack match found |
-| 14 | Praveen | 95095480 | praveen.v@hkmhyderabad.org | U0BU7CS2JN4 | Graphics | Senior Designer | member | high | 129 recent tasks in "Graphics Team / Praveen Tasks List"; email match |
-| 15 | Prema Rupa dasa | 100908346 | yatra1@hkmhyderabad.org | — | Fund Raising | FR Preacher | member | low | 62 recent tasks in "Prabhus Tasks / Prema Rupa Prabhu"; no Slack match found |
-| 16 | Ravi Pusthela | 101084085 | ravi.pusthela@hkmhyderabad.org | U0BTH59V9M2 | Graphics | Designer | member | high | 92 recent tasks in "Designer Task Assignment Sheet / Ravi"; email match |
-| 17 | Saci Ku Gauranga Dasa | 100908340 | skgd@hkmhyderabad.org | — | Digital Marketing | CRM Executive | member | low | 28 recent tasks in "Prabhus Tasks / Saci Kumar Gauranga Prabhu"; no Slack match found |
-| 18 | Sashikanta | 100918048 | preacher1@hkmhyderabad.org | — | Culture Connect | Lead Coordinator | member | low | 56 recent tasks in "24.06.2026 MOM TASKS / List"; no Slack match found |
-| 19 | Satish Maddela | 101054675 | satish.maddela@hkmhyderabad.org | — | Online Communications | Manager | member | low | 40 recent tasks in "HKGT Temple Works / Temple Works"; no Slack match found |
-| 20 | SHARAVAN KUMAR B | 100908345 | sharavan.b@hkmhyderabad.org | — | Fund Raising | FR Preacher | member | low | 93 recent tasks in "Sharavan tasks / List"; no Slack match found |
-| 21 | Shree Lakshmi | 266585199 | sugunaradhadevidasi@gmail.com | — | Culture Connect | Manager | member | low | external gmail address; 15 recent tasks in "Prabhus Tasks / Sashikanta Sahoo"; no Slack match found |
-| 22 | Sumanth | 100908337 | seo@hkmhyderabad.org | — | Digital Marketing | SEO | member | low | 38 recent tasks in "HKM SEO / List"; no Slack match found |
-| 23 | V NAVEEN KUMAR | 100908344 | accounts.tridas@hkmhyderabad.org | — | Yatra | Accounts Executive | member | low | 1 recent task in "Prabhus Tasks / Sharavan Prabhu Tasks"; no Slack match found |
-| 24 | Venkatesh (PPC) | 218543610 | dme1@hkmhyderabad.org | — | Digital Marketing | PPC | member | low | 195 recent tasks in "HKGT Performance Marketing / HKGT Daily Tasks"; no Slack match found |
-| 25 | venugopal | 100937968 | conwri@hkmhyderabad.org | — | Online Communications | Content Writer | member | low | 2 recent tasks in "09.04.2026 MOM TASKS / List"; no Slack match found |
-| 26 | Vishnu | 101043738 | editor1@hkmhyderabad.org | — | Online Communications | Video Editor | member | low | 37 recent tasks in "Designer Task Assignment Sheet / vishnu"; no Slack match found |
-
-## UNPLACED (no department signal — stays unplaced until the Principal places them)
-
-- 27. (no name) (ClickUp 106864846, Slack —, admin) — no recent task assignments; no
-  Slack match found. Left blank by the Principal on the Notion page, so the fetch
-  result stands: UNPLACED. Never a routing target.
-
-## Department roll-up (derived from the table above — 26 placed, 1 unplaced)
-
-| Department | Count | Rows |
+| Department | Head for routing | Basis |
 |---|---|---|
-| Digital Marketing | 6 | 7, 8, 9, 17, 22, 24 |
-| Fund Raising | 5 | 4, 12, 13, 15, 20 |
-| Online Communications | 4 | 1, 19, 25, 26 |
-| Graphics | 3 | 3, 14, 16 |
-| Yatra | 3 | 2, 5, 23 |
-| Culture Connect | 2 | 18, 21 |
-| All Depts | 2 | 10, 11 |
-| HR | 1 | 6 |
+| Yatra | Byreddy Saivardhan Reddy | designation 'Yatra Manager'; appears as manager 'Sai Vardhan' for 15 of the 17 |
+| Marketing | Hem Chand Tunga | designation 'Head - Digital Marketing'; manages 4 of the 8 |
+| Online Presence | Maddela Satish | designation 'Graphics - HOD'; Praveen is a sub-lead under him for 6 |
+| Fund Raising | **UNRESOLVED — route to MKCD** | three managers split it — MKCD (3), Nama Prabhu Dasa (3), Shravan (2) — and no Head/HOD designation |
+| HR | **UNRESOLVED — route to MKCD** | Rajendra Prasad Kandepu is 'HR Manager' but the sheet has both HR staff reporting to MKCD, not to him |
+| Kirtan | **UNRESOLVED — route to MKCD** | both report to MKCD directly |
+| AI | **UNRESOLVED — route to MKCD** | reports to MKCD directly |
+| Culture Connect | **UNRESOLVED — route to MKCD** | single volunteer, reports to MKCD directly |
+| ERP | **UNRESOLVED — route to MKCD** | reports to 'HG Lakshmikanth Prabhu', who has no row and no desk identity |
+| Office Assistant | **UNRESOLVED — route to MKCD** | reports to MKCD directly |
 
-## Slack tagging coverage — 7 of 27
+**Fallback:** every row's Next Level Reporting is `MKCD` (Mukunda Dasa, the
+Principal). An UNRESOLVED department, or any topic that does not map cleanly to one,
+goes to him — not to a guessed head.
 
-Only rows 3, 5, 8, 9, 10, 14, 16 carry a Slack ID. The desk tags by Slack user ID
-(rule 12 — a short name does not resolve), so **the other 20 cannot be @-mentioned in
-any outbound draft.** Name them in plain text and say the tag is unavailable; never
-invent a handle. This clears itself when they join Slack under their
-`@hkmhyderabad.org` address and `scripts/org_fetch.py` runs again.
+## The table
 
-_Sources: ClickUp workspace "Hare Krishna Movement" (members, groups, 90 lists, task
-sample) + Slack roster (emails), fetched 2026-08-28 by `scripts/org_fetch.py` — WARN
-at fetch time: 2 ClickUp workspaces visible, used "Hare Krishna Movement". Department
-and Designation: OPERATOR (the Principal, via the Notion page, read back 2026-08-28)._
+Manager and Reporting Authority are copied verbatim from the sheet. `MKCD` is the
+Principal. Next Level Reporting is `MKCD` for all 50 rows, so it is not repeated as a
+column. A blank ClickUp ID means the desk has no account for that person.
+
+### Yatra — 17
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 33 | Sudhir | Sudhir | Volunteer | MKCD | MKCD | — | — |
+| 34 | Pradyut Kumar Das | Prema Rupa Dasa | Senior Yatra Coordinator | Sai Vardhan | STDD | 100908346 | — |
+| 35 | Vikash Kumar | — | Senior Tele Sales Executive | Sai Vardhan | STDD | — | — |
+| 36 | D Narsing Rao | — | Tele Sales Executive | Sai Vardhan | STDD | — | — |
+| 37 | Anthati Sai Kumar | — | Tele Sales Executive | Sai Vardhan | STDD | — | — |
+| 38 | Lingala Sai Sharath | — | Tele Sales Executive | Sai Vardhan | STDD | — | — |
+| 39 | Ramesh J | Radha Giridhari Dasa | Fund Raising Executive | Sai Vardhan | STDD | — | — |
+| 40 | Rajashekhar Reddy | — | Fund Raising Executive | Sai Vardhan | STDD | — | — |
+| 41 | S Sudhakar | Sudhakar | Fund Raiser | Sai Vardhan | STDD | — | — |
+| 42 | G Sai Kiran | — | Tele Sales Executive | Sai Vardhan | STDD | — | — |
+| 43 | Deepak Kumar | — | Senior Yatra Admin Executive | Sai Vardhan | STDD | 100908342 | U0BTHE6D1RP |
+| 44 | Nagella Banusundar | Arjun Bandhu Dasa | Senior Yatra Coordinator | Sai Vardhan & MKCD | STDD | 100909875 | — |
+| 45 | V Naveen Kumar | — | Accounts Executive | Sai Vardhan & MKCD | STDD | 100908344 | — |
+| 46 | Sashikanta Sahoo | Sahoo | Fund Raising Executive | Sai Vardhan & MKCD | STDD | 100918048 | — |
+| 47 | Racharla Naveen Kumar | — | Admin Executive | Sai Vardhan & MKCD | STDD | 106800112 | — |
+| 48 | Angadala Naga Hanumaya Kumar | — | Junior Accounts Executive | Sai Vardhan & MKCD | STDD | — | — |
+| 49 | Byreddy Saivardhan Reddy | — | Yatra Manager | STDD & MKCD | STDD | — | — |
+
+### Fund Raising — 8
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 4 | Adicherla Naresh | Nama Prabhu Dasa | Fund Raising Executive | MKCD | MKCD | 100909874 | — |
+| 5 | B Sharvana Kumar | — | Senior Fund Raising Executive | MKCD | MKCD | 100908345 | — |
+| 6 | Yankiral Shiv Raj | — | Driver | MKCD | MKCD | — | — |
+| 7 | P Srilakshmi Sailaja | — | Telesales Manager | Nama Prabhu Dasa | MKCD | — | — |
+| 8 | Shiva Vara Prasad | — | Assistant - Outreach | Nama Prabhu Dasa | MKCD | — | — |
+| 9 | Venkatesh - Auto Driver | — | Auto Driver | Nama Prabhu Dasa | MKCD | — | — |
+| 10 | Nelluru Charan Kumar | — | Assistant - Outreach | Shravan | MKCD | 101083310 | — |
+| 11 | Anji - Auto Driver | — | Auto Driver | Shravan | MKCD | — | — |
+
+### Marketing — 8
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 16 | Himanshu Bisoyi | — | Full-Stack Developer | Hem Chand | STDD | 100908348 | U0BSXM1A1L7 |
+| 17 | Kouloju Sumanth | — | SEO Specialist | Hem Chand | STDD | 100908337 | — |
+| 18 | Gugulothu Venkatesh | — | PPC | Hem Chand | STDD | 218543610 | — |
+| 19 | Venigalla Sayikiran | — | CRM Executive | Hem Chand | STDD | 100908340 | — |
+| 20 | Manikanta Y | Maha Bhuja Dasa | **[[unverified: sheet cell holds a name, not a designation]]** | MKCD | MKCD | 260630579 | U0BTGRHEYEQ |
+| 21 | Hem Chand Tunga | — | Head - Digital Marketing | STDD | STDD | 100828205 | — |
+| 22 | Srinivas Mahankali — Consultant | — | Consultant | STDD | STDD | — | — |
+| 23 | Aniket - DYGN Media Consultant | — | Consultant | STDD | STDD | — | — |
+
+### Online Presence — 8
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 25 | Pinnoju Shashank | — | Video Editor | Praveen | STDD | — | — |
+| 26 | Chenna Reddy Gujjula | — | Photographer | Praveen | STDD | — | — |
+| 27 | Nagavishnu | — | Video Editor | Praveen | STDD | 101043738 | — |
+| 28 | Kanukuntla Venugopal | — | Content Creator | Praveen | STDD | 100937968 | — |
+| 29 | Merugu Akhil | — | Digital Marketing SEO | Praveen | STDD | 101043740 | — |
+| 30 | Sai Bharath Vamshi | — | Senior Video Editor | Praveen | STDD | 95095479 | U0BTFS3PP4J |
+| 31 | Vanamamulai Praveen | — | Senior Graphic Designer | Satish & STDD | STDD | 95095480 | U0BU7CS2JN4 |
+| 32 | Maddela Satish | — | Graphics - HOD | STDD | STDD | 101054675 | — |
+
+### HR — 2
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 12 | Rajendra Prasad Kandepu | — | HR Manager | MKCD | MKCD | — | — |
+| 13 | Parishetty Gnaneshwar | — | HR Executive | MKCD | MKCD | 100909505 | — |
+
+### Kirtan — 2
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 14 | Amit Mondal | Amrita Nimai Dasa | Kirtaniya | MKCD | MKCD | — | — |
+| 15 | Madhu Mangal Das | — | Kirtaniya | MKCD | MKCD | — | — |
+
+### AI — 1
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 1 | Bala Ganesh | Bala Mukunda Dasa | AI | MKCD | MKCD | — | — |
+
+### Culture Connect — 1
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 2 | Suguna Radha Devi Dasi | Suguna Radha Devi Dasi | Volunteer | MKCD | MKCD | 266585199 | — |
+
+### ERP — 1
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 3 | Saikumar Dumpetti | — | ERP Developer | HG Lakshmikanth Prabhu | STDD | — | — |
+
+### Office Assistant — 1
+
+| # | Name (as per Aadhaar) | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 24 | Purushottam Sharma | — | Office Associate | MKCD | MKCD | — | — |
+
+### No department on the sheet
+
+| # | Name | Spiritual name | Designation | Manager | Reporting Auth. | ClickUp ID | Slack ID |
+|---|---|---|---|---|---|---|---|
+| 50 | P Ravi Kumar | — | Senior Video Editor | — | — | 101084085 | U0BTH59V9M2 |
+
+Row 50 is the only row with no department and no manager, and it belongs to one of
+the six people the desk can still @-mention. Placing him is a one-line fix worth
+making in the source sheet.
+
+## Desk accounts NOT on the HR sheet
+
+Real ClickUp accounts the desk still sees. They are not employees on this sheet, so
+they carry no department; never route department work to them.
+
+| Name | ClickUp ID | Email | Slack ID | Note |
+|---|---|---|---|---|
+| Mukunda Dasa (the Principal) | 100877577 | mkcd@hkmhyderabad.org | U0BN7BW55C0 | appears on the sheet as `MKCD`, the reporting authority for all 50 |
+| Mukunda Prabhu Exe Asst | 100910556 | dmt@hkmhyderabad.org | — | shared account (`dmt@`), not an individual |
+| (no name on the account) | 106864846 | — | — | zero tasks, no Slack match; likely an integration |
+
+## Unresolved identities — raise before they enter any draft (rule 12)
+
+These appear as managers or reporting authorities but have no row on the sheet and no
+entry in the Contacts register, so the desk cannot tag them or assign to them:
+
+- **`STDD`** — Reporting Authority for **32 of the 50**, more than anyone except the
+  Principal. The single most load-bearing unknown in this file.
+  `[[unverified: initialism not resolved to a person]]`
+- **`HG Lakshmikanth Prabhu`** — manager of the ERP developer (row 3).
+  `[[unverified: no desk identity]]`
+- **`Shravan`** — manager of rows 10 and 11. Almost certainly row 5, B Sharvana Kumar,
+  but the spelling differs. `[[unverified: inferred from spelling, not confirmed]]`
+
+## Slack tagging coverage — 6 of 50
+
+Only these people can be @-mentioned. The desk tags by Slack user ID (rule 12 — a
+short name does not resolve); **the other 44 must be named in plain text**, with the
+tag noted as unavailable. Never invent a handle.
+
+| Name | Slack ID | Department |
+|---|---|---|
+| Himanshu Bisoyi | U0BSXM1A1L7 | Marketing |
+| Manikanta Y | U0BTGRHEYEQ | Marketing |
+| Sai Bharath Vamshi | U0BTFS3PP4J | Online Presence |
+| Vanamamulai Praveen | U0BU7CS2JN4 | Online Presence |
+| Deepak Kumar | U0BTHE6D1RP | Yatra |
+| P Ravi Kumar | U0BTH59V9M2 | — |
+
+Coverage fell from 7-of-27 to 6-of-50: the roster nearly doubled while the number of
+matched Slack accounts did not move, and the Principal's own ID now sits outside the
+employee table. Getting the 44 into Slack under their `@hkmhyderabad.org` addresses is
+the single highest-leverage fix for outbound drafting.
+
+## Source-sheet corrections applied
+
+Spelling normalised here; **the source sheet still carries the original** and is worth
+fixing there so the next import is clean:
+
+- `HR Manger` → HR Manager
+- `Photo Grapher` → Photographer
+- `Senior Yatra Cordinator` → Senior Yatra Coordinator
+- `Srinivas Mahankali-Conslutant` → Srinivas Mahankali — Consultant
+- Row 20 (Manikanta Y): the Designation cell repeats his spiritual name
+  "Maha Bhuja Dasa" instead of a designation — his actual designation is unknown.
+
+## Identity matches ratified by the Principal, 2026-09-23
+
+Four August rows could not be matched to this sheet by name. The Principal confirmed
+all four, which is what preserves their ClickUp and Slack IDs:
+
+- `Vishnu` = **Nagavishnu** (row 27) · `Ravi Pusthela` = **P Ravi Kumar** (row 50)
+- `Naveen R` = **Racharla Naveen Kumar** (row 47) · `Saci Ku Gauranga Dasa` =
+  **Venigalla Sayikiran** (row 19)
+
+_Sources: `Org_Structre_RR_Sep_2026.xlsx` (OPERATOR, supplied 2026-09-17) for every name,
+designation, department and reporting line. ClickUp IDs, emails and Slack IDs:
+ClickUp workspace "Hare Krishna Movement" + Slack roster, fetched 2026-08-28 by
+`scripts/org_fetch.py`, carried forward through the joins above._
