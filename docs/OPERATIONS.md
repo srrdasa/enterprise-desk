@@ -76,7 +76,10 @@
   ClickUp is the only tracker (tasks, action items, project plans); Notion is the only
   registers/knowledge layer. The 24 Sep "Budget and Tech Team Planning" meeting asked for
   finalised action items to be posted in Confluence — the desk created nothing there and
-  will not. Tasks titled "Agile/Jira — …" predate this and refer to the work, not the tool.
+  will not. The nine open tasks formerly titled "Agile/Jira — …" were retitled "Project plan
+  — …" on 25 Sep 2026; the work survives, only the tool named in the title died. Otter source
+  lines still cite the 19 Sep meeting by its real name, "Agile, Jira and Project Management" —
+  a citation, never edited.
   (Source: OPERATOR — the Principal, 25 Sep 2026.)
 
 ## 3. Channel routing
