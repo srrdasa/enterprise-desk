@@ -72,6 +72,13 @@
 - NO Atlassian/Confluence anywhere in this desk — any reference, env var, check or
   connector expecting one is leftover contamination to REMOVE, not satisfy.
 
+- **No Atlassian.** DECIDED by the Principal 25 Sep 2026: no Confluence, no Jira.
+  ClickUp is the only tracker (tasks, action items, project plans); Notion is the only
+  registers/knowledge layer. The 24 Sep "Budget and Tech Team Planning" meeting asked for
+  finalised action items to be posted in Confluence — the desk created nothing there and
+  will not. Tasks titled "Agile/Jira — …" predate this and refer to the work, not the tool.
+  (Source: OPERATOR — the Principal, 25 Sep 2026.)
+
 ## 3. Channel routing
 ClickUp = tasks & ideas; Slack = discussion; registers = Notion. Person-wise routing:
 `[[unverified: to be filled from ORG-STRUCTURE.md once confirmed]]`.
