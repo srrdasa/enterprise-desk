@@ -84,6 +84,27 @@ rather than a departure. He is retained here, excluded from headcounts, and NOT
 routed to, until the Principal says `Ravi: <department>` or `Ravi: remove`. Deleting a
 live person's record on an ambiguous signal is not reversible from the desk's side.
 
+## Named by the Principal, not yet on the board (2026-09-26)
+
+Identity resolutions given directly by the Principal on 2026-09-26 while reviewing the
+Otter transcript "Prasadam Revenue Generation Plan"
+(OTTER:tafueNj7P7ut5EaEUSkRHlRU66g). Source: OPERATOR. These people are NOT on the
+Whimsical board revision of 2026-08-28 and are NOT in the ClickUp Tasks list, so they
+cannot be assigned tasks; the desk names them in descriptions and chases through the
+Principal until the board and the list carry them.
+
+| Name | Function (as given) | On the board? | ClickUp | Slack |
+|---|---|---|---|---|
+| Achyuta Gopal Prabhu | Prasadam production — the counterparty in the 26 Sep meeting (Otter "Speaker 2") | no | — not a member | — unresolved |
+| Yekneshwara Dasa | Reporting authority above Achyuta Gopal Prabhu; the approval gate for the prasadam vertical | no | — not a member | — unresolved |
+
+Also resolved in the same turn: Otter "Speaker 3" in that transcript is **MAHA BHUJA
+DASA**, who IS on the roster (Digital Marketing / Senior Manager, row 9) and IS an
+assignable ClickUp member. No new record needed for him.
+
+The board is the Principal's to edit — the desk does not write to it (see the header).
+Adding these two there, and to the ClickUp Tasks list, is carried as a TODO.
+
 ## Department Slack channels (created 2026-08-28, all PRIVATE)
 
 One private channel per board department. `All Depts` deliberately has none — it is the
