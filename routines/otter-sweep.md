@@ -66,3 +66,22 @@ double-analyse every transcript and double-post the review.
   only the single best match, so a one-query zero is not a swept zero (rule 5). Use a
   broad multi-word query (e.g. `meeting discussion team`), which returns the day's
   recordings, and ledger-check every id it returns.
+
+- **A frozen id list is not enumeration — the failure that cost 36 transcripts.**
+  Observed 2026-10-20: the sweep had been passing the SAME 11 ids to
+  `otter_ledger.py check` every fire, inherited across compactions, and reporting a
+  clean `0 new` each time. Meanwhile 36 recordings dated 2026-09-30 → 2026-10-20 sat
+  unprocessed. A zero earned against a stale list is exactly the silent-pipeline
+  failure rule 5 exists to prevent. **Every fire must re-enumerate from Otter**, and
+  the ids passed to `check` must come from THAT fire's search, never from memory or
+  from an earlier turn.
+- **Paginate.** `otter_search` returns at most `page_size` (max 25) results and a
+  `next_cursor`. A single page can stop short of the oldest unprocessed recording.
+  Keep paging until the response carries `pagination_completion_reason:
+  all_results_returned`, or until the results reach past the newest ledger entry.
+- **Large results spill to a file.** A wide search exceeds the tool's token ceiling and
+  is written to a `tool-results/*.txt` JSON file instead. Parse it (`python3 -c` over
+  `result.content[0].text`) — do not narrow the search just to make it fit, that
+  re-creates the frozen-list failure.
+- **Ids can begin with `-`.** `check -0hxMs2zBLon...` is parsed as a flag and aborts the
+  whole check. Compare against the ledger in Python, or pass `--` first.
