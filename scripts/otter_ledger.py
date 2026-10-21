@@ -62,8 +62,12 @@ def mark(tid, state, title='', note='', tasks=None):
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest='cmd', required=True)
-    c = sub.add_parser('check');  c.add_argument('ids', nargs='+')
-    m = sub.add_parser('mark');   m.add_argument('id')
+    # Otter ids may start with '-' (e.g. -0hxMs2z...), which argparse reads as a
+    # flag. Accept them via --id/--ids too: `--id=-0hx...` parses cleanly.
+    c = sub.add_parser('check');  c.add_argument('ids', nargs='*')
+    c.add_argument('--ids', dest='ids_opt', default='', help='comma-separated ids')
+    m = sub.add_parser('mark');   m.add_argument('id', nargs='?')
+    m.add_argument('--id', dest='id_opt', default=None)
     m.add_argument('--state', required=True); m.add_argument('--title', default='')
     m.add_argument('--note', default=''); m.add_argument('--tasks', default='')
     l = sub.add_parser('list');   l.add_argument('--state', default=None)
@@ -71,12 +75,19 @@ def main():
     a = ap.parse_args()
 
     if a.cmd == 'check':
+        ids = list(a.ids) + [i for i in a.ids_opt.split(',') if i]
+        if not ids:
+            raise SystemExit('check: give ids positionally or as --ids=a,b')
+        a.ids = ids
         new = unseen(a.ids)
         print('\n'.join(new) if new else '')
         print(f'# {len(new)} new of {len(a.ids)} checked '
               f'({len(latest())} in ledger)', file=sys.stderr)
     elif a.cmd == 'mark':
-        r = mark(a.id, a.state, a.title, a.note,
+        tid = a.id_opt or a.id
+        if not tid:
+            raise SystemExit('mark: give an id positionally or as --id=<id>')
+        r = mark(tid, a.state, a.title, a.note,
                  [t for t in a.tasks.split(',') if t])
         print(json.dumps(r, ensure_ascii=False))
     elif a.cmd == 'list':
