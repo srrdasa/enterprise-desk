@@ -85,3 +85,14 @@ double-analyse every transcript and double-post the review.
   re-creates the frozen-list failure.
 - **Ids can begin with `-`.** `check -0hxMs2zBLon...` is parsed as a flag and aborts the
   whole check. Compare against the ledger in Python, or pass `--` first.
+
+- **A recording less than ~2h old may still be growing — and its id may be re-cut.**
+  Observed 2026-10-21: `5gpX_ySnmJoKSIMag7N9TLgzsv4` read at 10:20 UTC as a 19m52s
+  session starting 01:58, ending mid-sentence. An hour later the same id was a
+  **1h13m session starting 03:12**, and the 01:58 session had been split out under a
+  new id (`q4me6ByLcso8n8G1AmNCv1zE8Yg`). Otter re-processes and re-cuts live
+  recordings after capture. So: a transcript whose `start_time` is within ~2h of the
+  sweep is provisional — mark it PROPOSED as usual (step 8 loses nothing), but
+  **re-enumerate and compare `duration` on the next fire**, and re-read in full if it
+  changed. Never report "ends mid-sentence" as a defect without saying it may simply
+  still be recording.
