@@ -1,13 +1,31 @@
-# Routine — Otter transcript sweep (hourly, self-bound)
+# Routine — Otter transcript sweep (daily, self-bound)
 
-**Routine id:** `trig_01VVjwRPosDAmd7Y9TG4NBBE` · **cron:** `19 * * * *` (hourly,
-anchored to the creation minute so it does not pile onto :00 with every other Routine).
+**Routine id:** `trig_01VVjwRPosDAmd7Y9TG4NBBE` · **cron:** `CRON_TZ=Asia/Kolkata 52 20 * * *`
+(daily, 8:52 pm IST — a jittered minute so it does not pile onto :00 with every other Routine).
 
-**Cadence — 30 minutes was REQUESTED but is NOT AVAILABLE.** The platform enforces a
-1-hour minimum and rejects anything shorter: *"cron expression '*/30 * * * *' may fire
-runs as little as 30 minutes apart; the minimum interval is 1 hour"*. Hourly is the
-closest permitted. Do not "fix" this by adding a second offset Routine — two Routines
-for one cadence breaks the one-per-cadence invariant and double-analyses transcripts.
+**Cadence — DAILY, by the Principal's instruction (27 Oct).** It ran hourly until
+24 Oct. Measured cost of the hourly cadence: 46–78 million tokens per day, ~578 million
+over the nine days 10–18 Oct, for about a hundred one-line `0 new transcripts` no-ops —
+roughly a third of the month's entire consumption. The daily cadence cut that ~92%
+(to ~5M/day) while still catching every real transcript. Do not restore the hourly
+schedule, and do not add a second Routine for the same cadence — two Routines for one
+cadence breaks the one-per-cadence invariant and double-analyses transcripts.
+
+**Why 8:52 pm IST.** Late enough that the day's meetings have finished AND Otter has
+finished processing them (a transcript fetched too early comes back as a short cut and
+grows later — see the re-cut warning below), and early enough that the Principal is
+still working when the report lands. The sweep window is the last 2 days, so a late
+re-cut or a missed day is picked up on the next fire rather than lost.
+
+**Task creation — the gate was LIFTED on 27 Oct.** The Principal's instruction, verbatim
+in substance: read the Otter recordings once a day, create the tasks in ClickUp, and
+distribute them to the respective employees based on job role — "don't assign the task
+to me alone". The sweep now CREATES tasks instead of only proposing them. Four guards
+survive the change: owners still resolve by evidence, never by speaker label (rule 12);
+an owner that cannot be resolved gets an UNASSIGNED task plus a "needs an owner" line,
+never a silent default to the Principal; personnel, salary, termination, credential and
+confidential welfare/financial material is still HELD BACK for approval and reported in
+chat only; and anything with a time attached also becomes a calendar event (rule 2).
 
 **Target:** fires into ONE persistent session (`session_01ExMoskeTKS1LRMszHywEoY`),
 never a fresh session — `persist_session: true`. The Principal asked for continuity so

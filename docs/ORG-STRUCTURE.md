@@ -25,7 +25,7 @@ escalation and for chasing through a line manager; it does NOT override HOD rout
 | 5 | G Sai Kiran | Digital Marketing | Tele Caller for Failed Transactions | Hem Chand Tunga | — not in ClickUp | — |
 | 6 | Himanshu Bisoyi | Digital Marketing | Web Developer | Hem Chand Tunga | webdeveloper@hkmhyderabad.org | U0BSXM1A1L7 |
 | 7 | Venkatesh | Digital Marketing | PPC | Hem Chand Tunga | dme1@hkmhyderabad.org | — |
-| 8 | Sumanth | Digital Marketing | SEO | Hem Chand Tunga | seo@hkmhyderabad.org | U0BTN755X1B |
+| 8 | Sumanth | Digital Marketing | SEO | Hem Chand Tunga | seo@hkmhyderabad.org — LEFT ORG; mailbox + ClickUp seat handed to Vedavittama Dasa 27 Oct, do NOT assign | U0BTN755X1B |
 | 9 | MAHA BHUJA DASA | Digital Marketing | Senior Manager | Shruthadeva Dasa | mhbd@hkmhyderabad.org | U0BTGRHEYEQ |
 | 10 | Saci Ku Gauranga Dasa | Digital Marketing | CRM Executive | MAHA BHUJA DASA | skgd@hkmhyderabad.org | U0BTQH2GN4R |
 | 11 | Satish Maddela | Online Communications & Graphics | Manager | Mukunda Dasa | satish.maddela@hkmhyderabad.org | — |
@@ -39,15 +39,15 @@ escalation and for chasing through a line manager; it does NOT override HOD rout
 | 19 | Sai Vardhan | Tele Sales | Tele Sales Manager | Mukunda Dasa | — not in ClickUp | — |
 | 20 | Vikash Kumar | Tele Sales | Senior Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
 | 21 | Sri Lakshmi | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
-| 22 | Sai Kumar | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
-| 23 | Narsing Rao | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
-| 24 | Sai Kiran | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 22 | Sai Kumar | Tele Sales | Tele Sales Executive | Sai Vardhan | telecaller-1@hkmhyderabad.org | — |
+| 23 | Narsing Rao | Tele Sales | Tele Sales Executive | Sai Vardhan | telecaller2@hkmhyderabad.org | — |
+| 24 | Sai Kiran | Tele Sales | Tele Sales Executive | Sai Vardhan | telecaller4@hkmhyderabad.org | — |
 | 25 | Raja Shekhar | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
-| 26 | Sharath | Tele Sales | Tele Sales Executive | Sai Vardhan | — not in ClickUp | — |
+| 26 | Sharath | Tele Sales | Tele Sales Executive | Sai Vardhan | telecaller3@hkmhyderabad.org | — |
 | 27 | Sudhir | Fund Raising | FR Preacher | Mukunda Dasa | — not in ClickUp | — |
 | 28 | Nama Prabhu | Fund Raising | FR Preacher | Mukunda Dasa | namaprabhu@hkmhyderabad.org | — |
 | 29 | Venkatesh (Auto Driver) | Fund Raising | Auto Driver | Nama Prabhu | — not in ClickUp | — |
-| 30 | Shiva Vara Prasad | Fund Raising | FR Assistant | Nama Prabhu | — not in ClickUp | — |
+| 30 | Shiva Vara Prasad | Fund Raising | FR Assistant | Nama Prabhu | preach-asst2@hkmhyderabad.org | — |
 | 31 | SHARAVAN KUMAR B | Fund Raising | FR Preacher | Mukunda Dasa | sharavan.b@hkmhyderabad.org | — |
 | 32 | Anji | Fund Raising | Auto Driver | SHARAVAN KUMAR B | — not in ClickUp | — |
 | 33 | CHARAN NELLURU | Fund Raising | FR Assistant | SHARAVAN KUMAR B | preach-asst@hkmhyderabad.org | — |
@@ -67,8 +67,9 @@ escalation and for chasing through a line manager; it does NOT override HOD rout
 | 47 | Arjuna Bandhu Dasa _(ClickUp: Arjunabandhudas)_ | Yatra | Yatra Guide | Sai Vardhan (Yatra) | arbd@hkmhyderabad.org | — |
 | 48 | Rajendra Prasad | HR | HR Manager | Mukunda Dasa | — not in ClickUp | — |
 | 49 | Gnaneshwar Parishetty | HR | HR Executive | Rajendra Prasad | hrexec-dmt@hkmhyderabad.org | U0BTQSGD5B8 |
-| 50 | Bala Mukunda Dasa | AI | AI Implementation Manager | Mukunda Dasa | — not in ClickUp | — |
-| 51 | Sai | ERP | ERP Developer | Mukunda Dasa | — not in ClickUp | — |
+| 50 | Bala Mukunda Dasa | AI | AI Implementation Manager | Mukunda Dasa | balamukundadasa@hkmhyderabad.org | — |
+| 51 | Sai | ERP | ERP Developer | Mukunda Dasa | erpdev@hkmhyderabad.org | — |
+| 52 | Vedavittama Dasa | Digital Marketing | CRM / AI Developer (part-time) | Mukunda Dasa | veda@hkmhyderabad.org | — |
 
 ## Carried, pending the Principal's word — NOT on the current board
 
