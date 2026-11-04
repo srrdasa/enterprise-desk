@@ -1,4 +1,4 @@
-# Otter sweep backlog — 28–29 Oct transcripts, read in full, NOT yet filed
+# Otter sweep backlog — 28–29 Oct transcripts — FILED to ClickUp 2026-11-04 (26 tasks)
 
 Written 2026-11-01. The 28 and 29 Oct sweeps each read their transcripts in full
 but the session worker restarted before the ClickUp writes landed — four
