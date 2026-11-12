@@ -6,12 +6,12 @@ not proof the content is lost.
 
 | id | title | start | duration | first seen empty | checks | last checked |
 |---|---|---|---|---|---|---|
-| Zhb1D9ur05RVv-CtNqw00B_7arI | HKM AI Dev | 2026-11-09 00:58 | 11m56s | 2026-11-09 | 3 | 2026-11-11 |
+| Zhb1D9ur05RVv-CtNqw00B_7arI | HKM AI Dev | 2026-11-09 00:58 | 11m56s | 2026-11-09 | 4 | 2026-11-12 |
 
 Rule: if a recording is still empty after 5 checks, mark it SKIPPED in the
 ledger with note "no transcript produced by Otter after 5 checks" and drop it
 from this file. Never report these as a clean zero (rule 5) — they were
-recorded, they are simply unreadable. This one reaches 5 checks on 13 Nov.
+recorded, they are simply unreadable. This one reaches 5 checks on the 13 Nov sweep.
 
 ## The HKM AI Dev gap — closed on 10 November
 
